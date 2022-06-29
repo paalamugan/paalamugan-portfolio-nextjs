@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
-import MetaData, { getMetaImageUrl } from "@app/components/MetaData";
-
 import "@app/styles/global.scss";
+
+import MetaData, { getMetaImageUrl } from "@app/components/MetaData";
 import config from "@app/config";
 
 function MyApp({ Component, pageProps }: AppProps) {
