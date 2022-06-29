@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://paalamugan.com
+
+# Sitemaps
+Sitemap: https://paalamugan.com/sitemap.xml
