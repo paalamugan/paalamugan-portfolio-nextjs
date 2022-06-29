@@ -1,6 +1,6 @@
 {
   "name": "paalamugan-portfolio-nextjs",
-  "description": "Portfolio website",
+  "description": "A portfolio for a full stack developer. We used React js to make this portfolio. A clean design with full responsiveness. You will find this portfolio very professional. Also we added smooth scroll in the portfolio which will make the user experience really elegant.",
   "version": "1.0.0",
   "keywords": [
     "next",
@@ -20,8 +20,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export -o build",
-    "deploy": "yarn build && gh-pages -d build -b gh-pages",
+    "export": "yarn build && next export -o build",
+    "deploy": "yarn export && gh-pages -d build -b gh-pages",
     "postbuild": "next-sitemap",
     "prepare": "husky install"
   },
