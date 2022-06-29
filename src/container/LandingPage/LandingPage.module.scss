@@ -1,0 +1,14 @@
+.app {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  @apply bg-secondary;
+  @apply font-base;
+
+  &__container {
+    width: 100%;
+    min-height: 100vh;
+  }
+}

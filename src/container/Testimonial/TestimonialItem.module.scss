@@ -1,0 +1,77 @@
+.app__testimonial {
+  &-item {
+    width: 100%;
+    min-height: 345px;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 2000px) {
+      min-height: 450px;
+
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    @media screen and (min-width: 1400px) {
+      width: 60%;
+    }
+
+    @media screen and (min-width: 1078px) and (max-width: 1400px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  &-content {
+    flex: 1;
+    height: 100%;
+    padding: 0 2rem;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      color: var(--black-color);
+      font-family: var(--font-base);
+      text-align: center;
+
+      @media screen and (min-width: 2000px) {
+        font-size: 2rem;
+        line-height: 3.5rem;
+      }
+    }
+
+    h4 {
+      font-weight: 600;
+      color: rgb(var(--primary-color));
+      margin-top: 2rem;
+    }
+
+    h5 {
+      font-weight: 400;
+      color: var(--gray-color);
+      margin-top: 5px;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-top: 2rem;
+      padding: 0;
+    }
+  }
+}

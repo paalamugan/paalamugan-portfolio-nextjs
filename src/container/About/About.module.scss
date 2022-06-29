@@ -1,0 +1,27 @@
+.app__about {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  &-container {
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+}
+
+.p-text-lg {
+  font-size: 1rem;
+  text-align: left;
+  color: var(--gray-color);
+  line-height: 1.5;
+  margin-top: 10px;
+  @media screen and (min-width: 2000px) {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,30 @@
+.app__goto-top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  background: linear-gradient(0deg, #0c1792 23%, #2b3cf1 68%);
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  opacity: 0.9;
+  z-index: 99;
+  -webkit-animation: goToTopBounceIn ease-in-out 0.5s;
+  animation: goToTopBounceIn ease-in-out 0.5s;
+
+  @keyframes goToTopBounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}

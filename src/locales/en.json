@@ -1,0 +1,12 @@
+{
+  "hi": "Hello",
+  "bye": "Goodbye",
+  "nested1": {
+    "hi1": "Hello",
+    "bye1": "Goodbye",
+    "nested2": {
+      "hi2": "Hello",
+      "bye2": "Goodbye"
+    }
+  }
+}
