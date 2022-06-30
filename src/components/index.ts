@@ -4,3 +4,4 @@ export { default as GotoTopButton } from "./GotoTopButton";
 export { default as MediaIcon } from "./MediaIcon";
 export { default as LoadingContainer } from "./LoadingContainer";
 export { default as Navbar } from "./Navbar";
+export { default as Image } from "./Image";

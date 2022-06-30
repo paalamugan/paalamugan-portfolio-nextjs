@@ -2,7 +2,9 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { ImQuotesRight, ImQuotesLeft } from "react-icons/im";
 import { FaStar } from "react-icons/fa";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
+
+import { Image } from "@app/components";
 
 import style from "./TestimonialItem.module.scss";
 

@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { images } from "@app/constants";
+import { Image } from "@app/components";
 
 import style from "./Knowledge.module.scss";
 

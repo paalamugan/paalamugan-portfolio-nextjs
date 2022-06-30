@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
@@ -6,6 +5,7 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { programmingLanguages, workTabs } from "@app/constants";
 import { WorksData } from "@app/types";
+import { Image } from "@app/components";
 
 import { worksData } from "./data";
 

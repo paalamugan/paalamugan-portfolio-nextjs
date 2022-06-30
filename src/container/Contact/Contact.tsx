@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useState } from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import { BiLoaderCircle } from "react-icons/bi";
@@ -8,7 +7,7 @@ import { ContactFormData } from "@app/types";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { images, socialLinks } from "@app/constants";
 import { sendEmailMessage } from "@app/utils";
-import { MediaIcon } from "@app/components";
+import { MediaIcon, Image } from "@app/components";
 
 import style from "./Contact.module.scss";
 

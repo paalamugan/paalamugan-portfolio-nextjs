@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { AppWrap } from "@app/wrapper";
 import { icons, images, jobPositions } from "@app/constants";
+import { Image } from "@app/components";
 import Typed from "@app/components/Typed";
 
 import style from "./Home.module.scss";

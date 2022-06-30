@@ -1,12 +1,11 @@
-import Image from "next/image";
 import React, { useState, useEffect, Fragment, useRef } from "react";
 import ReactTooltip from "react-tooltip";
 import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "@app/wrapper";
-
 import { programmingLanguages } from "@app/constants";
 import { ExperiencesType } from "@app/types";
+import { Image } from "@app/components";
 
 import { experienceData, skillsData } from "./data";
 import style from "./Skills.module.scss";
