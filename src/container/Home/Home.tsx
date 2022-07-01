@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 import { AppWrap } from "@app/wrapper";
 import { icons, images, jobPositions } from "@app/constants";
-import { Image } from "@app/components";
 import Typed from "@app/components/Typed";
 
 import style from "./Home.module.scss";
+import ImageIcon from "./ImageIcon";
 
 const scaleVariants = {
   whileInView: {
@@ -72,14 +72,7 @@ const Home = () => {
         className={style["app__home-circles"]}
       >
         {[icons.react, icons.nodejs, icons.javascript].map((circle, index) => (
-          <div className={`${style["circle-cmp"]} app__flex`} key={`circle-${index}`}>
-            <Image
-              src={circle}
-              alt={`profile_bg-${index}`}
-              width={index === 0 ? 100 : index === 1 ? 150 : 70}
-              height={index === 0 ? 100 : index === 1 ? 150 : 70}
-            />
-          </div>
+          <ImageIcon key={index} circle={circle} index={index} />
         ))}
       </motion.div>
     </div>

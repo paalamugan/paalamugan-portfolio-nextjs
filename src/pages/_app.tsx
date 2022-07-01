@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import "@app/styles/global.scss";
+import "@app/styles/app.scss";
 
 import MetaData, { getMetaImageUrl } from "@app/components/MetaData";
 import config from "@app/config";
