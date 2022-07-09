@@ -35,7 +35,36 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
       <meta name="twitter:site" content="@trypaalamugan" />
       <meta name="twitter:creator" content="@trypaalamugan" />
 
-      <link rel="preconnect" href="https://fonts.gstatic.com/" />
+      <link rel="preconnect" href="//fonts.gstatic.com/" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      {/* <link
+        rel="preload"
+        href="//fonts.gstatic.com/s/creepster/v13/AlZy_zVUqJz4yMrniH4Rcn35.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin="fonts.gstatic.com"
+      />
+      <link
+        rel="preload"
+        href="//fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZOIHQ.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin="fonts.gstatic.com"
+      />
+      <link
+        rel="preload"
+        href="//fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriAWCrCBimCw.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin="fonts.gstatic.com"
+      />
+      <link
+        rel="preload"
+        href="//fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriASitCBimCw.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin="fonts.gstatic.com"
+      /> */}
 
       <script type="application/ld+json">
         {`
