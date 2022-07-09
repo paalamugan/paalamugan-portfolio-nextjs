@@ -1,4 +1,4 @@
-const path = require("path");
+// const path = require("path");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -6,9 +6,9 @@ const nextConfig = {
   //   includePaths: [path.join(__dirname, "styles"), ],
   // },
   reactStrictMode: true,
-  images: {
-    loader: "custom",
-  },
+  // images: {
+  //   loader: "custom",
+  // },
 };
 
 module.exports = nextConfig;
