@@ -11,9 +11,10 @@ function ImageIcon({ index, circle }: { index: number; circle: any }) {
     >
       <Image
         src={circle}
+        layout="fixed"
         alt={`profile_bg-${index}`}
-        width={index === 0 ? 100 : index === 1 ? 150 : 70}
-        height={index === 0 ? 100 : index === 1 ? 150 : 70}
+        width={index === 0 ? 65 : index === 1 ? 100 : 40}
+        height={index === 0 ? 65 : index === 1 ? 100 : 40}
         onLoad={() => {
           SetShowSkeletonClass(false);
         }}
