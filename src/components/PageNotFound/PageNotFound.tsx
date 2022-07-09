@@ -6,7 +6,7 @@ import notFound from "@app/assets/404.svg";
 const PageNotFound = () => {
   return (
     <div className={style["page-not-found"]}>
-      <Image alt="404" src={notFound} />
+      <Image alt="404" src={notFound} width={130} height={130} />
       <h1>Page Not Found</h1>
       <p>You may have mistyped the address or the page may have moved.</p>
       <button className={style["back-btn"]}>

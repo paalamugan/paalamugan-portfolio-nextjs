@@ -50,7 +50,13 @@ const Knowledge = () => {
             className={`cursor-pointer ${style["app__profile-item"]}`}
             key={about.title}
           >
-            <Image src={about.imgUrl} alt={about.title} className="skeleton" />
+            <Image
+              src={about.imgUrl}
+              alt={about.title}
+              className="skeleton"
+              width={210}
+              height={160}
+            />
             <h2 className="bold-text mt-5 mb-3">{about.title}</h2>
             <p className="p-text">{about.description}</p>
           </motion.div>
