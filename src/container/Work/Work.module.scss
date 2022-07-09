@@ -52,7 +52,7 @@
       width: 300px;
       flex-direction: column;
 
-      margin: 2rem;
+      margin: 2rem 0;
       padding: 1rem;
       border-radius: 0.5rem;
       background-color: #fff;
@@ -67,17 +67,19 @@
 
       @media screen and (min-width: 500px) {
         width: 370px;
+        margin: 2rem;
       }
 
       @media screen and (min-width: 2000px) {
         width: 470px;
+        margin: 2rem;
         padding: 1.25rem;
         border-radius: 0.75rem;
       }
 
       @media screen and (max-width: 300px) {
         width: 100%;
-        margin: 1rem;
+        margin: 1rem 0;
       }
     }
 
