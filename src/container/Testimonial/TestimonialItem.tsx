@@ -56,6 +56,7 @@ const TestimonialItem = ({
               src={iconUrl}
               alt={iconName}
               title={iconName}
+              layout="fixed"
               width={20}
               height={15}
               className="bg-gray-400"

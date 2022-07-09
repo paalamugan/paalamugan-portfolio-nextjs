@@ -89,7 +89,7 @@ const Contact = () => {
               <div className={`mb-5 ${style["contact_note_bottom"]}`}>
                 <div className={style["contact_info"]}>
                   <span className="mt-1 mr-3 text-primary">
-                    <Image src={images.gmail} alt="Gmail" width={18} height={18} />
+                    <Image src={images.gmail} alt="Gmail" width={18} height={18} layout="fixed" />
                   </span>
                   <div>
                     <h4>Email</h4>
@@ -98,7 +98,13 @@ const Contact = () => {
                 </div>
                 <div className={style["contact_info"]}>
                   <span className="mt-1 mr-3 text-primary">
-                    <Image src={images.social} alt="Social Media" width={18} height={18} />
+                    <Image
+                      src={images.social}
+                      alt="Social Media"
+                      width={18}
+                      height={18}
+                      layout="fixed"
+                    />
                   </span>
                   <div>
                     <h4>Social Media</h4>
@@ -124,7 +130,13 @@ const Contact = () => {
                 </div>
                 <div className={style["contact_info"]}>
                   <span className="mt-1 mr-3 text-primary">
-                    <Image src={images.location} alt="Location" width={18} height={18} />
+                    <Image
+                      src={images.location}
+                      alt="Location"
+                      width={18}
+                      height={18}
+                      layout="fixed"
+                    />
                   </span>
                   <div>
                     <h4>Location</h4>

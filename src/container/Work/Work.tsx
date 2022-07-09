@@ -69,6 +69,7 @@ const Work = () => {
                 src={work.imgUrl}
                 alt={work.name}
                 className="skeleton"
+                layout="fixed"
                 width={370}
                 height={230}
               />
@@ -134,6 +135,7 @@ const Work = () => {
                         src={programmingLanguages[tag]?.icon}
                         alt={programmingLanguages[tag]?.name}
                         title={programmingLanguages[tag]?.name}
+                        layout="fixed"
                         width={24}
                         height={24}
                       />

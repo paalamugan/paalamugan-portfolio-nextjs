@@ -59,36 +59,39 @@ const Skills = () => {
 
       <div className={style["app__skills-container"]}>
         <motion.div className={style["app__skills-list"]}>
-          {skills.map((skill) => (
-            <motion.a
-              key={programmingLanguages[skill]?.name}
-              href={programmingLanguages[skill]?.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={programmingLanguages[skill]?.name}
-              whileInView={{ opacity: [0, 1] }}
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.5, type: "tween" }}
-              className={`cursor-pointer ${style["app__skills-item"]} app__flex`}
-            >
-              <div
-                className="app__flex"
-                style={{
-                  backgroundColor: programmingLanguages[skill]?.bgColor,
-                }}
+          {skills.map((skill) => {
+            return (
+              <motion.a
+                key={programmingLanguages[skill]?.name}
+                href={programmingLanguages[skill]?.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={programmingLanguages[skill]?.name}
+                whileInView={{ opacity: [0, 1] }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.5, type: "tween" }}
+                className={`cursor-pointer ${style["app__skills-item"]} app__flex`}
               >
-                {programmingLanguages[skill]?.icon && (
-                  <Image
-                    src={programmingLanguages[skill]?.icon}
-                    alt={`icon-${programmingLanguages[skill]?.name}`}
-                    width="50%"
-                    height="50%"
-                  />
-                )}
-              </div>
-              <p className="p-text">{programmingLanguages[skill]?.name}</p>
-            </motion.a>
-          ))}
+                <div
+                  className="app__flex"
+                  style={{
+                    backgroundColor: programmingLanguages[skill]?.bgColor,
+                  }}
+                >
+                  {programmingLanguages[skill]?.icon && (
+                    <Image
+                      layout="fixed"
+                      src={programmingLanguages[skill]?.icon}
+                      alt={`icon-${programmingLanguages[skill]?.name}`}
+                      width={"50%"}
+                      height={"50%"}
+                    />
+                  )}
+                </div>
+                <p className="p-text">{programmingLanguages[skill]?.name}</p>
+              </motion.a>
+            );
+          })}
         </motion.div>
         <div className={style["app__skills-exp"]}>
           {experiences.map((experience) => (

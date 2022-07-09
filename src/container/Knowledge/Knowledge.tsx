@@ -54,6 +54,7 @@ const Knowledge = () => {
               src={about.imgUrl}
               alt={about.title}
               className="skeleton"
+              layout="fixed"
               width={210}
               height={160}
             />
