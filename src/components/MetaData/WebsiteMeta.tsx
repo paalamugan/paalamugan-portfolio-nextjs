@@ -19,6 +19,7 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content="freelancer developer, software developer, software engineer, senior software engineer, full stack developer, mean stack developer, mern stack developer, javascript developer, frontend developer, backend developer, nodejs developer jam stack developer" />
       <meta name="theme-color" content="#000000" />
 
       <link rel="canonical" href={canonical} />
