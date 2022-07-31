@@ -4,7 +4,7 @@ import { GetStaticProps } from "next";
 export const getStaticProps: GetStaticProps = () => {
   return {
     props: {
-      title: "Paalamugan || Page Not Found",
+      title: "Page Not Found - Paalamugan",
     },
   };
 };

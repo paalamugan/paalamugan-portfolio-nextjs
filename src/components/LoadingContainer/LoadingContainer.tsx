@@ -1,6 +1,6 @@
 import style from "./LoadingContainer.module.scss";
 
-const LoadingContainer = ({ name = "Loading" }) => {
+const LoadingContainer = ({ name = "" }) => {
   const className = name === "home" ? style["home"] : name === "contact" ? style["contact"] : "";
   return (
     <div className={`${style["loader-container"]} ${className}`}>
