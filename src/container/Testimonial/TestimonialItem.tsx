@@ -1,12 +1,10 @@
+import Image, { StaticImageData } from "next/image";
 import { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { ImQuotesRight, ImQuotesLeft } from "react-icons/im";
-import { FaStar } from "react-icons/fa";
-import { StaticImageData } from "next/image";
-
-import { Image } from "@app/components";
+import { useAnimation } from "framer-motion";
+import { MotionDiv } from "@app/lazy/framer-motion";
 
 import style from "./TestimonialItem.module.scss";
+import { FaStar, ImQuotesLeft, ImQuotesRight } from "@app/lazy/react-icons";
 
 interface TestimonialItemProps {
   name: string;
@@ -32,12 +30,12 @@ const TestimonialItem = ({
   }, [animate, controls]);
 
   return (
-    <motion.div
+    <MotionDiv
       className={`${style["app__testimonial-item"]} app__flex`}
       animate={controls}
       transition={{ duration: 1 }}
     >
-      <motion.div className={style["app__testimonial-content"]}>
+      <MotionDiv className={style["app__testimonial-content"]}>
         <div className="flex justify-between w-full text-2xl text-gray-600">
           <ImQuotesLeft />
           <ImQuotesRight />
@@ -71,8 +69,8 @@ const TestimonialItem = ({
             </a>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </MotionDiv>
+    </MotionDiv>
   );
 };
 

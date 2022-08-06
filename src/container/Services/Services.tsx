@@ -1,9 +1,5 @@
-import React from "react";
-import { BsSpeedometer2 } from "react-icons/bs";
-import { MdOutlineAnalytics } from "react-icons/md";
-import { BiCodeCurly } from "react-icons/bi";
-import { motion } from "framer-motion";
-
+import { MotionDiv } from "@app/lazy/framer-motion";
+import { BiCodeCurly, BsSpeedometer2, MdOutlineAnalytics } from "@app/lazy/react-icons";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 
 import style from "./Services.module.scss";
@@ -37,7 +33,7 @@ const Services = () => (
 
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       {serviceLists.map(({ icon, title, description }) => (
-        <motion.div
+        <MotionDiv
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.4 }}
           key={title}
@@ -48,7 +44,7 @@ const Services = () => (
             <h2 className="mt-4 mb-3 text-3xl font-semibold text-gray-800 ">{title}</h2>
             <p className="mb-4 text-base text-gray-600">{description}</p>
           </div>
-        </motion.div>
+        </MotionDiv>
       ))}
     </div>
   </>

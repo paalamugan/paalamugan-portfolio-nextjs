@@ -1,5 +1,5 @@
-import { resolve } from "@app/utils";
 import { useRouter } from "next/router";
+import { resolve } from "@app/utils";
 
 import WebsiteMeta from "./WebsiteMeta";
 

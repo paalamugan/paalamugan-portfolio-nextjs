@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Image from "../Image";
-import style from "./PageNotFound.module.scss";
+import Image from "next/image";
 import notFound from "@app/assets/404.svg";
+
+import style from "./PageNotFound.module.scss";
 
 const PageNotFound = () => {
   return (

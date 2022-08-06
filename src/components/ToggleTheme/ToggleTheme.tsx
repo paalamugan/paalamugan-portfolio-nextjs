@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { useContext } from "react";
 import { ThemeContext } from "@app/context";
 import { images } from "@app/constants";
-import { Image } from "@app/components";
 
 import style from "./ToggleTheme.module.scss";
 

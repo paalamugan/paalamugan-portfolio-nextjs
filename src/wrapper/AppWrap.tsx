@@ -1,7 +1,22 @@
+import dynamic from "next/dynamic";
 import { FunctionComponent } from "react";
-import { type NavLink } from "@app/constants";
-import { GotoTopButton, NavigationDots, SocialMedia } from "../components";
+import { NavLink } from "@app/constants";
+import { NavigationDots } from "../components";
 import style from "./AppWrap.module.scss";
+
+const SocialMedia = dynamic(
+  () => import("../components/SocialMedia/SocialMedia" /* webpackChunkName: "SocialMedia" */),
+  {
+    ssr: false,
+  },
+);
+
+const GotoTopButton = dynamic(
+  () => import("../components/GotoTopButton/GotoTopButton" /* webpackChunkName: "GotoTopButton" */),
+  {
+    ssr: false,
+  },
+);
 
 const AppWrap = (
   Component: FunctionComponent,

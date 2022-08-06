@@ -1,24 +1,17 @@
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { getTotalExperience } from "@app/utils";
 
+import { MotionDiv } from "@app/lazy/framer-motion";
 import style from "./About.module.scss";
 
-const LottiePlayerLight = dynamic(() => import("react-lottie-player/dist/LottiePlayerLight"), {
-  ssr: false,
-});
+const LottieAnimation = dynamic(
+  () => import("./LottieAnimation" /* webpackChunkName: "LottieAnimation" */),
+  { ssr: false },
+);
 
 const About = () => {
-  const [lottieAnimation, setLottieAnimation] = useState<any>(null);
   const { year } = getTotalExperience();
-
-  useEffect(() => {
-    import("./lottie-animation.json").then(setLottieAnimation);
-  }, []);
-
   return (
     <>
       <h2 className="head-text">
@@ -26,7 +19,7 @@ const About = () => {
       </h2>
       <div className={`w-full ${style["app__about-container"]} 2xl:w-4/5`}>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <motion.div className="flex flex-col justify-center">
+          <MotionDiv className="flex flex-col justify-center">
             <p className={style["p-text-lg"]}>
               I love learning new things. Having {year}+ year of experience in MEAN & MERN Stack
               development and more enthusiasm for my work. Able to work independently, as a part of
@@ -47,17 +40,8 @@ const About = () => {
               years at a leading IT enabled business company known as Quantiphi Analytics Private
               Ltd.
             </p>
-          </motion.div>
-          <motion.div className="flex justify-end">
-            <LottiePlayerLight
-              play
-              loop
-              data-anim-type="fade-in-left"
-              data-anim-delay="100"
-              animationData={lottieAnimation}
-              speed={1}
-            />
-          </motion.div>
+          </MotionDiv>
+          <LottieAnimation />
         </div>
       </div>
     </>

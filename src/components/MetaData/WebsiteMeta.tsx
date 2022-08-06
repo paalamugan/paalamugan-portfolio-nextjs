@@ -1,6 +1,4 @@
-import React from "react";
 import Head from "next/head";
-
 import ImageMeta from "./ImageMeta";
 
 interface WebsiteMetaProps {
@@ -16,7 +14,7 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
     <Head>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      {/* <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta
@@ -39,7 +37,7 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
       <meta name="twitter:site" content="@trypaalamugan" />
       <meta name="twitter:creator" content="@trypaalamugan" />
 
-      <link rel="preconnect" href="//fonts.gstatic.com/" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       {/* <link
         rel="preload"

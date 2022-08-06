@@ -10,10 +10,12 @@ export const navLink = {
   skills: "SKILLS",
   testimonial: "TESTIMONIAL",
   contact: "CONTACT",
-};
-export type NavLink = keyof typeof navLink;
+} as const;
 
-export const navLinks = Object.entries(navLink) as [NavLink, string][];
+export type NavLink = keyof typeof navLink;
+export type NavLinkValue = typeof navLink[NavLink];
+
+export const navLinks = Object.entries(navLink) as [NavLink, NavLinkValue][];
 
 export const socialLinks = [
   {

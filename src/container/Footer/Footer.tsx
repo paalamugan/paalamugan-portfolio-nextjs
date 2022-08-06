@@ -1,6 +1,6 @@
-import React from "react";
+import { FunctionComponent } from "react";
 
-const Footer = () => {
+const Footer: FunctionComponent = () => {
   const year = new Date().getFullYear();
   return (
     <footer>

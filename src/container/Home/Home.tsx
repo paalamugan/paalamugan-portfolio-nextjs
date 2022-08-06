@@ -1,11 +1,10 @@
-import { motion } from "framer-motion";
-
 import { AppWrap } from "@app/wrapper";
+import { MotionDiv, MotionImg } from "@app/lazy/framer-motion";
 import { icons, images, jobPositions } from "@app/constants";
 import Typed from "@app/components/Typed";
 
-import style from "./Home.module.scss";
 import ImageIcon from "./ImageIcon";
+import style from "./Home.module.scss";
 
 const scaleVariants = {
   whileInView: {
@@ -21,7 +20,7 @@ const scaleVariants = {
 const Home = () => {
   return (
     <div className={`${style["app__home"]} app__flex`}>
-      <motion.div
+      <MotionDiv
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
         className={style["app__home-info"]}
@@ -49,24 +48,24 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </motion.div>
+      </MotionDiv>
 
-      <motion.div
+      <MotionDiv
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className={style["app__home-img"]}
       >
         {/* <img src={images.profile} alt="profile_bg" /> */}
-        <motion.img
+        <MotionImg
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
           src={images.circle.src}
           alt="profile_circle"
           className={style["overlay_circle"]}
         />
-      </motion.div>
+      </MotionDiv>
 
-      <motion.div
+      <MotionDiv
         variants={scaleVariants}
         whileInView={scaleVariants.whileInView}
         className={style["app__home-circles"]}
@@ -74,7 +73,7 @@ const Home = () => {
         {[icons.react, icons.nodejs, icons.javascript].map((circle, index) => (
           <ImageIcon key={index} circle={circle} index={index} />
         ))}
-      </motion.div>
+      </MotionDiv>
     </div>
   );
 };

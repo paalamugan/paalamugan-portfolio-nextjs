@@ -1,4 +1,4 @@
-interface WorkType {
+export interface WorkType {
   name: string;
   company: string;
   desc: string;

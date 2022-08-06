@@ -8,6 +8,8 @@
 
 @import "components";
 
+@import "react-toastify/dist/ReactToastify.css";
+
 :root {
   --font-base: "DM Sans", sans-serif;
   --font-creeper: "Creeper", sans-serif;
@@ -16,7 +18,7 @@
   --secondary-color: 237 242 248;
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
+  --gray-color: #565b64;
   --brown-color: #46364a;
   --white-color: #ffffff;
   --loading-grey: #ededed;
@@ -131,6 +133,6 @@ svg {
   }
 }
 
-.skeleton {
+.skeleton-loading {
   @include mixins.skeleton-loading;
 }

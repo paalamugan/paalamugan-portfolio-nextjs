@@ -1,15 +1,15 @@
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { AiFillEye, AiFillGithub } from "react-icons/ai";
-import { motion } from "framer-motion";
 
+import { LazyMotionDiv, MotionDiv } from "@app/lazy/framer-motion";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { programmingLanguages, workTabs } from "@app/constants";
 import { WorksData } from "@app/types";
-import { Image } from "@app/components";
 
 import { worksData } from "./data";
 
 import style from "./Work.module.scss";
+import { AiFillEye, AiFillGithub } from "@app/lazy/react-icons";
 
 const Work = () => {
   const [works, setWorks] = useState<WorksData[]>([]);
@@ -57,7 +57,7 @@ const Work = () => {
         ))}
       </div>
 
-      <motion.div
+      <MotionDiv
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className={style["app__work-portfolio"]}
@@ -68,13 +68,13 @@ const Work = () => {
               <Image
                 src={work.imgUrl}
                 alt={work.name}
-                className="skeleton"
+                className="skeleton-loading"
                 layout="fixed"
                 width={370}
                 height={230}
               />
 
-              <motion.div
+              <MotionDiv
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: "easeInOut", staggerChildren: 0.5 }}
                 className={`${style["app__work-portfolio-hover"]} app__flex`}
@@ -85,14 +85,14 @@ const Work = () => {
                   rel="noopener noreferrer"
                   aria-label={`View ${work.title} Demo`}
                 >
-                  <motion.div
+                  <LazyMotionDiv
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
                     transition={{ duration: 0.25 }}
                     className="app__flex"
                   >
                     <AiFillEye />
-                  </motion.div>
+                  </LazyMotionDiv>
                 </a>
                 <a
                   href={work.codeLink}
@@ -100,16 +100,16 @@ const Work = () => {
                   rel="noopener noreferrer"
                   aria-label={`View ${work.title} Github`}
                 >
-                  <motion.div
+                  <LazyMotionDiv
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
                     transition={{ duration: 0.25 }}
                     className="app__flex"
                   >
                     <AiFillGithub />
-                  </motion.div>
+                  </LazyMotionDiv>
                 </a>
-              </motion.div>
+              </MotionDiv>
             </div>
 
             <div className={style["app__work-portfolio-content"]}>
@@ -147,7 +147,7 @@ const Work = () => {
             </div>
           </div>
         ))}
-      </motion.div>
+      </MotionDiv>
     </>
   );
 };

@@ -1,45 +1,45 @@
-import React, { useState, useEffect, Fragment, useRef } from "react";
-import ReactTooltip from "react-tooltip";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { useState, useEffect, Fragment, useRef } from "react";
+
+import { MotionA, MotionDiv } from "@app/lazy/framer-motion";
+import { ReactTooltip } from "@app/lazy/react-tooltip";
 
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { programmingLanguages } from "@app/constants";
-import { ExperiencesType } from "@app/types";
-import { Image } from "@app/components";
+import { ExperiencesType, WorkType } from "@app/types";
 
 import { experienceData, skillsData } from "./data";
 import style from "./Skills.module.scss";
 
-const WorkElement = (work: any) => {
-  const tooltipRef = useRef<any>(null);
+const WorkElement = (work: WorkType) => {
+  // const tooltipRef = useRef<any>(null);
 
   return (
     <Fragment key={work.name}>
-      <motion.div
+      <MotionDiv
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
         className={style["app__skills-exp-work"]}
         data-tip
         data-for={work.name}
         onMouseEnter={() => {
-          tooltipRef.current.tooltipRef.classList.add("show");
+          // tooltipRef.current.tooltipRef.classList.add("show");
         }}
         onMouseLeave={() => {
-          tooltipRef.current.tooltipRef.classList.remove("show");
+          // tooltipRef.current.tooltipRef.classList.remove("show");
         }}
       >
         <h3 className="bold-text">{work.name}</h3>
         <p className="p-text">{work.company}</p>
-      </motion.div>
-      <ReactTooltip
-        ref={tooltipRef}
+      </MotionDiv>
+      {/* <ReactTooltip
         id={work.name}
         effect="solid"
         arrowColor="#fff"
         className={style["skills-tooltip"]}
       >
         {work.desc}
-      </ReactTooltip>
+      </ReactTooltip> */}
     </Fragment>
   );
 };
@@ -58,10 +58,10 @@ const Skills = () => {
       <h2 className="head-text">Skills & Experiences</h2>
 
       <div className={style["app__skills-container"]}>
-        <motion.div className={style["app__skills-list"]}>
+        <MotionDiv className={style["app__skills-list"]}>
           {skills.map((skill) => {
             return (
-              <motion.a
+              <MotionA
                 key={programmingLanguages[skill]?.name}
                 href={programmingLanguages[skill]?.url}
                 target="_blank"
@@ -89,22 +89,22 @@ const Skills = () => {
                   )}
                 </div>
                 <p className="p-text">{programmingLanguages[skill]?.name}</p>
-              </motion.a>
+              </MotionA>
             );
           })}
-        </motion.div>
+        </MotionDiv>
         <div className={style["app__skills-exp"]}>
           {experiences.map((experience) => (
-            <motion.div className={style["app__skills-exp-item"]} key={experience.year}>
+            <MotionDiv className={style["app__skills-exp-item"]} key={experience.year}>
               <div className={style["app__skills-exp-year"]}>
                 <p className="bold-text">{experience.year}</p>
               </div>
-              <motion.div className={style["app__skills-exp-works"]}>
+              <MotionDiv className={style["app__skills-exp-works"]}>
                 {experience.works.map((work) => (
                   <WorkElement key={work.name} {...work} />
                 ))}
-              </motion.div>
-            </motion.div>
+              </MotionDiv>
+            </MotionDiv>
           ))}
         </div>
       </div>

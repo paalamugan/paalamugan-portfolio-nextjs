@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Image } from "@app/components";
+import Image from "next/image";
 import style from "./Home.module.scss";
 
 function ImageIcon({ index, circle }: { index: number; circle: any }) {
   const [showSkeletonClass, SetShowSkeletonClass] = useState(true);
   return (
     <div
-      className={`app__flex ${showSkeletonClass ? style["skeleton"] : ""}`}
+      className={`app__flex ${showSkeletonClass ? style["skeleton-loading"] : ""}`}
       key={`circle-${index}`}
     >
       <Image

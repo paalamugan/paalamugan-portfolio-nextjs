@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { FaAngleUp } from "react-icons/fa";
+import { FaAngleUp } from "@app/lazy/react-icons";
 import style from "./GotoTopButton.module.scss";
 
 const GotoTopButton = () => {

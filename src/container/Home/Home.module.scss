@@ -115,11 +115,11 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   }
 
-  div:not(.skeleton) {
+  div:not(.skeleton-loading) {
     background: var(--white-color);
   }
 
-  .skeleton {
+  .skeleton-loading {
     @include mixins.skeleton-loading;
   }
 

@@ -1,5 +1,4 @@
 import config from "@app/config";
-import emailjs from "@emailjs/browser";
 
 /**
  * Capitalize the first letter of a string.
@@ -12,7 +11,8 @@ export const capitalizeCase = (str = "") => str.charAt(0).toUpperCase() + str.sl
  * @param formData - The data that you want to send to the template.
  * @returns A promise.
  */
-export const sendEmailMessage = (formData: Record<string, unknown> = {}) => {
+export const sendEmailMessage = async (formData: Record<string, unknown> = {}) => {
+  const emailjs = await import("@emailjs/browser");
   const { emailJsServiceId, emailJsTemplateId, emailJsPublicKey } = config;
   return emailjs.send(emailJsServiceId, emailJsTemplateId, formData, emailJsPublicKey);
 };
@@ -55,3 +55,5 @@ export const getTotalExperience = (_startDate?: Date) => {
     month,
   };
 };
+
+export const isBrowser = typeof window !== "undefined";
