@@ -1,6 +1,36 @@
 {
   "name": "Paalamugan || Senior Software Engineer",
   "short_name": "Paalamugan",
+  "description": "Software Engineer Website",
+  "shortcuts": [
+    {
+      "name": "Paalamugan || Senior Software Engineer",
+      "short_name": "Paalamugan",
+      "description": "Software Engineer Website",
+      "url": "/",
+      "icons": [
+        {
+          "src": "https://paalamugan.com/android-chrome-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://paalamugan.com/screenshots/home-page.png",
+      "sizes": "2880x1800",
+      "type": "image/png",
+      "description": "Paalamugan - Home Page"
+    },
+    {
+      "src": "https://paalamugan.com/screenshots/about-page.png",
+      "sizes": "2880/1800",
+      "type": "image/png",
+      "description": "Paalamugan - About Page"
+    }
+  ],
+  "orientation": "any",
   "icons": [
     {
       "src": "favicon.ico",
