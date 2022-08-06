@@ -11,8 +11,8 @@ const ImageMeta = ({ image, title }: ImageMetaProps) => (
     <meta name="twitter:image" content={image} />
     <meta property="og:image" content={image} />
     {/* These are the image sizes of the SEO feature images */}
-    <meta property="og:image:width" content="1000" />
-    <meta property="og:image:height" content="523" />
+    <meta property="og:image:width" content="1082" />
+    <meta property="og:image:height" content="160" />
     <meta property="og:image:alt" content={title} />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:secure_url" content={image} />
