@@ -100,7 +100,6 @@
 
     &-works {
       flex: 1;
-      padding: 0.6rem;
       border-radius: 0.5rem;
       &:hover {
         background: #f7f7f7;
@@ -113,6 +112,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       // margin-bottom: 1rem;
+      padding: 0.6rem;
       cursor: pointer;
 
       h3 {
@@ -143,18 +143,14 @@
 }
 
 .skills-tooltip {
-  max-width: 300px !important;
-  background-color: var(--white-color) !important;
+  max-width: 400px !important;
+  min-width: 400px !important;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
   border-radius: 5px !important;
   padding: 1rem !important;
-  color: var(--gray-color) !important;
   text-align: center !important;
-  line-height: 1.5 !important;
-  opacity: 1 !important;
-  margin-top: -15px !important;
   @media screen and (min-width: 2000px) {
-    font-size: 1.75rem !important;
+    font-size: 1.75rem;
     max-width: 500px !important;
     line-height: 2 !important;
   }

@@ -10,7 +10,9 @@
 
 @import "react-toastify/dist/ReactToastify.css";
 
-:root {
+*,
+*::after,
+*::before {
   --font-base: "DM Sans", sans-serif;
   --font-creeper: "Creeper", sans-serif;
 
@@ -28,6 +30,14 @@
   --twitter-color: #1da1f2;
   --facebook-color: #4267b2;
   --instagram-color: #da2980;
+
+  --tooltip-scale: 0;
+  --tooltip-arrow-size: 5px;
+  --tooltip-font-size: 14px;
+  --tooltip-gap: 6px;
+  --tooltip-color: var(--gray-color);
+  --tooltip-bg-color: rgba(255, 255, 255, 1);
+  --tooltip-animation-sec: 150ms;
 }
 
 html {

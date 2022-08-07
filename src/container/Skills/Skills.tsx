@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { useState, useEffect, Fragment, useRef } from "react";
+import { useState, useEffect, Fragment } from "react";
 
 import { MotionA, MotionDiv } from "@app/lazy/framer-motion";
-import { ReactTooltip } from "@app/lazy/react-tooltip";
+import { BsFillQuestionCircleFill } from "@app/lazy/react-icons";
 
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { programmingLanguages } from "@app/constants";
@@ -12,34 +12,22 @@ import { experienceData, skillsData } from "./data";
 import style from "./Skills.module.scss";
 
 const WorkElement = (work: WorkType) => {
-  // const tooltipRef = useRef<any>(null);
-
   return (
-    <Fragment key={work.name}>
+    <Fragment>
       <MotionDiv
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
-        className={style["app__skills-exp-work"]}
-        data-tip
-        data-for={work.name}
-        onMouseEnter={() => {
-          // tooltipRef.current.tooltipRef.classList.add("show");
-        }}
-        onMouseLeave={() => {
-          // tooltipRef.current.tooltipRef.classList.remove("show");
-        }}
+        className={`${style["app__skills-exp-work"]} tooltip-container`}
       >
-        <h3 className="bold-text">{work.name}</h3>
+        <h3 className="bold-text app__flex">
+          {work.name} <BsFillQuestionCircleFill className="ml-1" />
+        </h3>
         <p className="p-text">{work.company}</p>
+        <div
+          className={`${style["skills-tooltip"]} tooltip top`}
+          dangerouslySetInnerHTML={{ __html: work.desc }}
+        ></div>
       </MotionDiv>
-      {/* <ReactTooltip
-        id={work.name}
-        effect="solid"
-        arrowColor="#fff"
-        className={style["skills-tooltip"]}
-      >
-        {work.desc}
-      </ReactTooltip> */}
     </Fragment>
   );
 };

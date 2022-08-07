@@ -14,6 +14,7 @@ export type LazyFaStar = typeof import("react-icons/fa").FaStar;
 export type LazyBsTwitter = typeof import("react-icons/bs").BsTwitter;
 export type LazyBsInstagram = typeof import("react-icons/bs").BsInstagram;
 export type LazyBsSpeedometer2 = typeof import("react-icons/bs").BsSpeedometer2;
+export type LazyBsFillQuestionCircleFill = typeof import("react-icons/bs").BsFillQuestionCircleFill;
 export type LazyBiLoaderCircle = typeof import("react-icons/bi").BiLoaderCircle;
 export type LazyBiCodeCurly = typeof import("react-icons/bi").BiCodeCurly;
 export type LazyMdOutlineAnalytics = typeof import("react-icons/md").MdOutlineAnalytics;
@@ -162,6 +163,19 @@ export const LazyBsSpeedometer2 = dynamic(
   },
 ) as LazyBsSpeedometer2;
 
+export const LazyBsFillQuestionCircleFill = dynamic(
+  () =>
+    import("react-icons/bs" /* webpackChunkName: "react-icons-BsFillQuestionCircleFill" */).then(
+      (mod) => ({
+        default: mod.BsFillQuestionCircleFill,
+      }),
+    ),
+  {
+    suspense: true,
+    ssr: false,
+  },
+) as LazyBsFillQuestionCircleFill;
+
 export const LazyBiLoaderCircle = dynamic(
   () =>
     import("react-icons/bi" /* webpackChunkName: "react-icons-BiLoaderCircle" */).then((mod) => ({
@@ -261,3 +275,6 @@ export const ImQuotesRight = withSuspense<LazyImQuotesRight>(LazyImQuotesRight);
 export const ImQuotesLeft = withSuspense<LazyImQuotesLeft>(LazyImQuotesLeft);
 export const AiFillEye = withSuspense<LazyAiFillEye>(LazyAiFillEye);
 export const AiFillGithub = withSuspense<LazyAiFillGithub>(LazyAiFillGithub);
+export const BsFillQuestionCircleFill = withSuspense<LazyBsFillQuestionCircleFill>(
+  LazyBsFillQuestionCircleFill,
+);

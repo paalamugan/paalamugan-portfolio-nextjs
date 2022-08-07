@@ -53,7 +53,7 @@ const Contact = () => {
     sendEmailMessage(formData as unknown as Record<string, unknown>)
       .then(() => {
         setFormData({ name: "", email: "", subject: "", message: "" });
-        toast.success(`Thank you for reaching out to me! I will get back to you soon.`);
+        toast.success(`Thank you for reaching out to me, I will get back to you soon.`);
       })
       .catch(() => {
         toast.error("Something went wrong. Please try again later.");
@@ -214,7 +214,7 @@ const Contact = () => {
                 </div>
               </div>
               <button
-                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-primary hover:bg-primary/95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-primary hover:bg-primary/95"
                 type="submit"
                 name="submit_message"
                 disabled={loading}
