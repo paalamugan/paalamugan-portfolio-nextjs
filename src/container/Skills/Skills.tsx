@@ -1,19 +1,18 @@
 import Image from "next/image";
-import { useState, useEffect, Fragment } from "react";
 
 import { MotionA, MotionDiv } from "@app/lazy/framer-motion";
 import { BsFillQuestionCircleFill } from "@app/lazy/react-icons";
 
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { programmingLanguages } from "@app/constants";
-import { ExperiencesType, WorkType } from "@app/types";
+import { WorkType } from "@app/types";
 
 import { experienceData, skillsData } from "./data";
 import style from "./Skills.module.scss";
 
 const WorkElement = (work: WorkType) => {
   return (
-    <Fragment>
+    <>
       <MotionDiv
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -28,19 +27,14 @@ const WorkElement = (work: WorkType) => {
           dangerouslySetInnerHTML={{ __html: work.desc }}
         ></div>
       </MotionDiv>
-    </Fragment>
+    </>
   );
 };
 
+const skills = skillsData;
+const experiences = experienceData;
+
 const Skills = () => {
-  const [experiences, setExperiences] = useState<ExperiencesType[]>([]);
-  const [skills, setSkills] = useState<string[]>([]);
-
-  useEffect(() => {
-    setExperiences(experienceData);
-    setSkills(skillsData);
-  }, []);
-
   return (
     <>
       <h2 className="head-text">Skills & Experiences</h2>
