@@ -53,7 +53,7 @@ const Contact = () => {
     sendEmailMessage(formData as unknown as Record<string, unknown>)
       .then(() => {
         setFormData({ name: "", email: "", subject: "", message: "" });
-        toast.success(`Thank you for reaching out to me, I will get back to you soon.`);
+        toast.success(`Thank you for reach out to me, I will get back to you soon.`);
       })
       .catch(() => {
         toast.error("Something went wrong. Please try again later.");
