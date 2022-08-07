@@ -23,7 +23,9 @@ export function withSuspense<
   }[keyof P1],
 >(
   Component: ComponentType<P1>,
-  { fallback }: WithSuspenseProps<P1> = { fallback: <div className="skeleton-loading" /> },
+  { fallback }: WithSuspenseProps<P1> = {
+    fallback: <div className="skeleton-loading w-full h-full" />,
+  },
 ) {
   const SuspenseComponent: ForwardRefRenderFunction<RefArg, P1> = (props, ref) => {
     return (

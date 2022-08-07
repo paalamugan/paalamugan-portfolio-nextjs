@@ -1,4 +1,4 @@
-import { BsInstagram, BsTwitter, FaFacebookF, FaGithub, FaLinkedin } from "@app/lazy/react-icons";
+import { FaInstagram, FaTwitter, FaFacebookF, FaGithub, FaLinkedin } from "@app/lazy/react-icons";
 
 const MediaIcon = ({ icon, children, ...rest }: any) => {
   switch (icon) {
@@ -9,9 +9,9 @@ const MediaIcon = ({ icon, children, ...rest }: any) => {
     case "facebook":
       return children || <FaFacebookF {...rest} />;
     case "twitter":
-      return children || <BsTwitter {...rest} />;
+      return children || <FaTwitter {...rest} />;
     case "instagram":
-      return children || <BsInstagram {...rest} />;
+      return children || <FaInstagram {...rest} />;
     default:
       return null;
   }

@@ -1,18 +1,18 @@
 import { MotionDiv } from "@app/lazy/framer-motion";
-import { BiCodeCurly, BsSpeedometer2, MdOutlineAnalytics } from "@app/lazy/react-icons";
+import { BiCodeCurly, LazyFaTachometerAlt, IoMdAnalytics } from "@app/lazy/react-icons";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 
 import style from "./Services.module.scss";
 
 const serviceLists = [
   {
-    icon: <BsSpeedometer2 />,
+    icon: <LazyFaTachometerAlt />,
     title: "Speed Optimization",
     description:
       "We offer speed optimization service plans that can help your website load at top speeds.",
   },
   {
-    icon: <MdOutlineAnalytics />,
+    icon: <IoMdAnalytics />,
     title: "SEO",
     description:
       "SEO is one of the best online marketing strategies to help your business improve its online presence.",

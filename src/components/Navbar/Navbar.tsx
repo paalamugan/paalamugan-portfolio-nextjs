@@ -1,18 +1,18 @@
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect, useRef, Suspense } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useCycle } from "framer-motion";
-import { HiX, HiMenu } from "@app/lazy/react-icons";
+import { HiMenu, HiX } from "@app/lazy/react-icons";
+
 import { MotionDiv, LazyMotionDiv } from "@app/lazy/framer-motion";
 
 import { images, navLinks } from "@app/constants";
 import { useClickOutside } from "@app/hooks";
 
-// import Menu from "./Menu";
 import style from "./Navbar.module.scss";
-import dynamic from "next/dynamic";
-import Image from "next/image";
 
-const Menu = dynamic(() => import("./Menu"), { ssr: false });
+const Menu = dynamic(() => import("./Menu" /* webpackChunkName: "Navbar-Menu" */), { ssr: false });
 
 const navbarVariants = {
   open: {
@@ -31,31 +31,6 @@ const navbarVariants = {
     },
   },
 };
-
-// export const LazyMotionDiv = dynamic(
-//   () => import("framer-motion").then((mod) => ({ default: mod.motion.div })),
-//   {
-//     suspense: true,
-//     ssr: false,
-//   },
-// ) as typeof import("framer-motion").motion.div;
-
-// const MotionDiv1 = (props: any, ref: any) => {
-//   return (
-//     <Suspense fallback={<div className={props.className}>{props.children}</div>}>
-//       <LazyMotionDiv ref={ref} {...props} />
-//     </Suspense>
-//   );
-// };
-
-// const RefMotionDiv = React.forwardRef(MotionDiv1) as typeof import("framer-motion").motion.div;
-// export function MotionDivLo<T extends Record<string, any>>(props: T) {
-//   return (
-//     <Suspense fallback={<div className={props.className}>{props.children}</div>}>
-//       <LazyMotionDiv {...props} />
-//     </Suspense>
-//   );
-// }
 
 const Navbar = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);

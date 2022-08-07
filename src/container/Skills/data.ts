@@ -1,4 +1,4 @@
-export const experienceData = [
+export const experiences = [
   {
     year: 2021,
     works: [
@@ -69,9 +69,9 @@ export const experienceData = [
       },
     ],
   },
-];
+] as const;
 
-export const skillsData = [
+export const skills = [
   "html",
   "css",
   "javascript",
@@ -92,4 +92,4 @@ export const skillsData = [
   "heroku",
   "docker",
   "python",
-];
+] as const;

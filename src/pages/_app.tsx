@@ -3,6 +3,7 @@ import "@app/styles/app.scss";
 
 import MetaData, { getMetaImageUrl } from "@app/components/MetaData";
 import config from "@app/config";
+import { ToastContainer } from "@app/lazy/react-toastify";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { siteUrl, title, description, image } = pageProps;
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <MetaData siteUrl={_siteUrl} image={_image} title={_title} description={_description} />
       <Component {...pageProps} />
+      <ToastContainer />
     </>
   );
 }
