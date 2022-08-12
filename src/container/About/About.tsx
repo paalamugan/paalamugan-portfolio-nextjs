@@ -3,12 +3,16 @@ import { AppWrap, MotionWrap } from "@app/wrapper";
 import { getTotalExperience } from "@app/utils";
 
 import { MotionDiv } from "@app/lazy/framer-motion";
+import { withSuspense } from "@app/components/Suspense";
+
 import style from "./About.module.scss";
 
-const LottieAnimation = dynamic(
+const LazyLottieAnimation = dynamic(
   () => import("./LottieAnimation" /* webpackChunkName: "LottieAnimation" */),
-  { ssr: false },
+  { suspense: true, ssr: false },
 );
+
+const LottieAnimation = withSuspense(LazyLottieAnimation);
 
 const About = () => {
   const { year } = getTotalExperience();

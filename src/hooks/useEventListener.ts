@@ -4,7 +4,7 @@ export default function useEventListener<
   T1 extends string,
   T2 extends (event: T3 & Event) => void,
   T3,
->(eventType: T1, callback: T2, element: T3 | null = null) {
+>(eventType: T1, callback: T2, element?: T3) {
   const callbackRef = useRef(callback);
 
   useEffect(() => {
