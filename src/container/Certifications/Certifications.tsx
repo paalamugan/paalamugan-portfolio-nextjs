@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 
 import { certifications } from "./data";

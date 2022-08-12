@@ -14,6 +14,7 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
     <Head>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+      <meta httpEquiv="Content-Security-Policy" content="img-src 'self' data:;" />
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       <title>{title}</title>
       <meta name="description" content={description} />

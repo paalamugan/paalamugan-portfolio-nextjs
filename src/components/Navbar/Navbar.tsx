@@ -9,10 +9,9 @@ import { MotionDiv, LazyMotionDiv } from "@app/lazy/framer-motion";
 
 import { images, navLinks } from "@app/constants";
 import { useClickOutside } from "@app/hooks";
-import useIntersectionObserver from "@app/hooks/useIntersectionObserver";
-import useScroll from "@app/hooks/useScroll";
 
 import style from "./Navbar.module.scss";
+import { throttle } from "@app/utils";
 
 const Menu = dynamic(() => import("./Menu" /* webpackChunkName: "Navbar-Menu" */), { ssr: false });
 
@@ -41,13 +40,24 @@ const Navbar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const navbarRef = useRef<HTMLElement>(null);
 
-  useScroll(() => {
-    if (window.scrollY > 100) {
-      navbarRef.current?.classList.add(style["app__navbar--shadow"]);
-    } else {
-      navbarRef.current?.classList.remove(style["app__navbar--shadow"]);
-    }
-  });
+  useEffect(() => {
+    const handleScroll = throttle(() => {
+      const element = navbarRef.current;
+      if (!element) return;
+
+      const className = style["app__navbar--shadow"];
+      const hasShadowClassName = element.classList.contains(className);
+
+      if (window.scrollY > 100) {
+        !hasShadowClassName && element.classList.add(className);
+      } else {
+        hasShadowClassName && element.classList.remove(className);
+      }
+    });
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const { hash } = window.location;

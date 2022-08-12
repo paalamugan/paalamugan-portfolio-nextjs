@@ -1,3 +1,5 @@
+import style from "./Certification.module.scss";
+
 import GoogleCloudFundamentalsCoreInfrastructure from "@app/assets/certifications/google-cloud-fundamentals-core-infrastructure.png";
 import CloudEngineering from "@app/assets/certifications/cloud-engineering.png";
 import GoogleCloudEssentials from "@app/assets/certifications/google-cloud-essentials.png";
@@ -65,6 +67,7 @@ export const certifications = [
   {
     title: "Customer Experiences with Contact Center AI",
     image: ContactCenterAI,
+    className: style["certificate-border"],
     url: "https://partner.cloudskillsboost.google/public_profiles/30b21e32-378e-4044-baee-cd872fa2659d/badges/1588411",
   },
 ];
