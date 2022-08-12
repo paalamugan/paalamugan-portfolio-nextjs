@@ -14,28 +14,29 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
     <Head>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      {/* <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> */}
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta
         name="keywords"
         content="software developer, software engineer, senior software engineer, full stack developer, mean stack developer, mern stack developer, javascript developer, frontend developer, backend developer, nodejs developer, jam stack developer, freelance developer"
       />
-      <meta name="theme-color" content="#000000" />
+      <meta name="theme-color" content="#ffffff" />
 
       <link rel="canonical" href={canonical} />
-      <meta property="og:site_name" content={title} />
-      <meta property="og:site_description" content={description} />
+      <meta property="og:url" content={canonical} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
+      <meta property="og:site_name" content={title} />
+      <meta property="og:site_description" content={description} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={canonical} />
+      <meta property="og:locale" content="en_US" />
 
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:url" content={canonical} />
-      <meta name="twitter:site" content="@trypaalamugan" />
-      <meta name="twitter:creator" content="@trypaalamugan" />
+      <meta name="twitter:site" content="@PaalMugan" />
+      <meta name="twitter:creator" content="@PaalMugan" />
 
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
