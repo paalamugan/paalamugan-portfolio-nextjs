@@ -30,7 +30,7 @@ const Certification: FC<CertificationProps> = ({ url, image, title, className })
           }}
         />
       </a>
-      <h3 className="text-center text-gray-700 font-bold mb-1 mt-4">{title}</h3>
+      <h3 className="text-center text-gray-700 font-bold mt-4 px-4 lg:px-0">{title}</h3>
     </div>
   );
 };

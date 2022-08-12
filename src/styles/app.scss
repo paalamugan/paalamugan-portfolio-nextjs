@@ -43,6 +43,7 @@
 html {
   font-size: 100.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -53,7 +54,7 @@ html {
 }
 
 body {
-  @apply bg-secondary font-sansSerif;
+  @apply bg-secondary font-sansSerif overflow-x-hidden;
 }
 
 svg {
