@@ -9,6 +9,8 @@ import { MotionDiv, LazyMotionDiv } from "@app/lazy/framer-motion";
 
 import { images, navLinks } from "@app/constants";
 import { useClickOutside } from "@app/hooks";
+import useIntersectionObserver from "@app/hooks/useIntersectionObserver";
+import useScroll from "@app/hooks/useScroll";
 
 import style from "./Navbar.module.scss";
 
@@ -37,6 +39,15 @@ const Navbar = () => {
   const [currentActiveLink, setCurrentActiveLink] = useState("");
   const [navbarOpen, toggleNavbarOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const navbarRef = useRef<HTMLElement>(null);
+
+  useScroll(() => {
+    if (window.scrollY > 100) {
+      navbarRef.current?.classList.add(style["app__navbar--shadow"]);
+    } else {
+      navbarRef.current?.classList.remove(style["app__navbar--shadow"]);
+    }
+  });
 
   useEffect(() => {
     const { hash } = window.location;
@@ -62,7 +73,7 @@ const Navbar = () => {
   });
 
   return (
-    <nav className={style["app__navbar"]}>
+    <nav ref={navbarRef} className={style["app__navbar"]}>
       <div className={style["app__navbar-logo"]}>
         <Link href="/">
           <a>

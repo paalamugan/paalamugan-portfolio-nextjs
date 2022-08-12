@@ -11,7 +11,7 @@ export default function useMediaQuery(mediaQuery: string) {
     setIsMatch(list.matches);
   }, [mediaQuery]);
 
-  useEventListener("change", (e: MediaQueryListEvent) => setIsMatch(e.matches), mediaQueryList);
+  useEventListener("change", (e) => setIsMatch(e.matches), mediaQueryList);
 
   return isMatch;
 }

@@ -15,15 +15,10 @@ export type LazyFaPaperPlane = typeof import("@react-icons/all-files/fa/FaPaperP
 export type LazyFaStar = typeof import("@react-icons/all-files/fa/FaStar").FaStar;
 export type LazyFaTwitter = typeof import("@react-icons/all-files/fa/FaTwitter").FaTwitter;
 export type LazyFaInstagram = typeof import("@react-icons/all-files/fa/FaInstagram").FaInstagram;
-export type LazyFaTachometerAlt =
-  typeof import("@react-icons/all-files/fa/FaTachometerAlt").FaTachometerAlt;
 export type LazyBsFillQuestionCircleFill =
   typeof import("@react-icons/all-files/bs/BsFillQuestionCircleFill").BsFillQuestionCircleFill;
 export type LazyBiLoaderCircle =
   typeof import("@react-icons/all-files/bi/BiLoaderCircle").BiLoaderCircle;
-export type LazyBiCodeCurly = typeof import("@react-icons/all-files/bi/BiCodeCurly").BiCodeCurly;
-export type LazyIoMdAnalytics =
-  typeof import("@react-icons/all-files/io/IoMdAnalytics").IoMdAnalytics;
 export type LazyImQuotesRight =
   typeof import("@react-icons/all-files/im/ImQuotesRight").ImQuotesRight;
 export type LazyImQuotesLeft = typeof import("@react-icons/all-files/im/ImQuotesLeft").ImQuotesLeft;
@@ -183,19 +178,6 @@ export const LazyFaInstagram = dynamic(
   },
 ) as LazyFaInstagram;
 
-export const LazyFaTachometerAlt = dynamic(
-  () =>
-    import(
-      "@react-icons/all-files/fa/FaTachometerAlt" /* webpackChunkName: "react-icons-FaTachometerAlt" */
-    ).then((mod) => ({
-      default: mod.FaTachometerAlt,
-    })),
-  {
-    suspense: true,
-    ssr: false,
-  },
-) as LazyFaTachometerAlt;
-
 export const LazyBsFillQuestionCircleFill = dynamic(
   () =>
     import(
@@ -221,32 +203,6 @@ export const LazyBiLoaderCircle = dynamic(
     ssr: false,
   },
 ) as LazyBiLoaderCircle;
-
-export const LazyBiCodeCurly = dynamic(
-  () =>
-    import(
-      "@react-icons/all-files/bi/BiCodeCurly" /* webpackChunkName: "react-icons-BiCodeCurly" */
-    ).then((mod) => ({
-      default: mod.BiCodeCurly,
-    })),
-  {
-    suspense: true,
-    ssr: false,
-  },
-) as LazyBiCodeCurly;
-
-export const LazyIoMdAnalytics = dynamic(
-  () =>
-    import(
-      "@react-icons/all-files/io/IoMdAnalytics" /* webpackChunkName: "react-icons-IoMdAnalytics" */
-    ).then((mod) => ({
-      default: mod.IoMdAnalytics,
-    })),
-  {
-    suspense: true,
-    ssr: false,
-  },
-) as LazyIoMdAnalytics;
 
 export const LazyImQuotesRight = dynamic(
   () =>
@@ -310,9 +266,6 @@ export const FaTwitter = withSuspense<LazyFaTwitter>(LazyFaTwitter);
 export const FaInstagram = withSuspense<LazyFaInstagram>(LazyFaInstagram);
 export const FaPaperPlane = withSuspense<LazyFaPaperPlane>(LazyFaPaperPlane);
 export const BiLoaderCircle = withSuspense<LazyBiLoaderCircle>(LazyBiLoaderCircle);
-export const FaTachometerAlt = withSuspense<LazyFaTachometerAlt>(LazyFaTachometerAlt);
-export const IoMdAnalytics = withSuspense<LazyIoMdAnalytics>(LazyIoMdAnalytics);
-export const BiCodeCurly = withSuspense<LazyBiCodeCurly>(LazyBiCodeCurly);
 export const HiChevronLeft = withSuspense<LazyHiChevronLeft>(LazyHiChevronLeft);
 export const HiChevronRight = withSuspense<LazyHiChevronRight>(LazyHiChevronRight);
 export const FaStar = withSuspense<LazyFaStar>(LazyFaStar);

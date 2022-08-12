@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 
-export default function useEventListener<T1, T2 extends Event, T3>(
-  eventType: T1,
-  callback: (event: T2) => void,
-  element: T3 | any = window,
-) {
+export default function useEventListener<
+  T1 extends string,
+  T2 extends (event: T3 & Event) => void,
+  T3,
+>(eventType: T1, callback: T2, element: T3 | null = null) {
   const callbackRef = useRef(callback);
 
   useEffect(() => {
@@ -12,10 +12,18 @@ export default function useEventListener<T1, T2 extends Event, T3>(
   }, [callback]);
 
   useEffect(() => {
-    if (element == null) return;
-    const handler = (event: T2) => callbackRef.current(event);
-    element.addEventListener(eventType, handler);
+    const domElement = (element || window) as unknown as HTMLElement;
+    if (!domElement) return;
+    const handler = callbackRef.current || (() => {});
+    domElement.addEventListener(
+      eventType,
+      handler as unknown as EventListenerOrEventListenerObject,
+    );
 
-    return () => element.removeEventListener(eventType, handler);
+    return () =>
+      domElement.removeEventListener(
+        eventType,
+        handler as unknown as EventListenerOrEventListenerObject,
+      );
   }, [eventType, element]);
 }

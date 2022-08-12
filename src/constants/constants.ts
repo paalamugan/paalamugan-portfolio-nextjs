@@ -5,9 +5,9 @@ export const navLink = {
   home: "HOME",
   about: "ABOUT",
   knowledge: "KNOWLEDGE",
-  services: "SERVICES",
-  work: "WORK",
+  certifications: "CERTIFICATIONS",
   skills: "SKILLS",
+  work: "WORK",
   testimonial: "TESTIMONIAL",
   contact: "CONTACT",
 } as const;

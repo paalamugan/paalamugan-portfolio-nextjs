@@ -1,10 +1,11 @@
 import { useState } from "react";
 import useEventListener from "./useEventListener";
+import { isBrowser } from "@app/utils";
 
-export default function useWindowSize() {
+export default function useWindowReSize() {
   const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: isBrowser() ? window.innerWidth : 0,
+    height: isBrowser() ? window.innerHeight : 0,
   });
 
   useEventListener("resize", () => {

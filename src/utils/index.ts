@@ -1,4 +1,5 @@
 import config from "@app/config";
+import { Argument } from "@app/types";
 
 /**
  * Capitalize the first letter of a string.
@@ -56,4 +57,65 @@ export const getTotalExperience = (_startDate?: Date) => {
   };
 };
 
-export const isBrowser = typeof window !== "undefined";
+/**
+ * If the type of window is undefined, then we're not in the browser.
+ */
+export const isBrowser = () => typeof window !== "undefined";
+
+/**
+ * It takes a callback function and returns a new function that will call the callback function after a
+ * delay
+ * @param {TCallback} cb - TCallback - the callback function that you want to debounce
+ * @param [delay=250] - The amount of time to wait before calling the callback.
+ * @returns A function that takes a callback and a delay and returns a function that takes a variable
+ * number of arguments.
+ */
+export const debounce = <TCallback extends Function, TArgument extends Argument<TCallback>>(
+  cb: TCallback,
+  delay = 250,
+) => {
+  let timeout: NodeJS.Timeout;
+
+  return (...args: TArgument) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      cb(...args);
+    }, delay);
+  };
+};
+
+/**
+ * It returns a function that calls the callback function with the given arguments after a delay
+ * @param {TCallback} cb - The callback function to be throttled.
+ * @param [delay=1000] - The amount of time to wait before calling the callback.
+ * @returns A function that takes in a callback and a delay and returns a function that takes in
+ * arguments.
+ */
+export const throttle = <TCallback extends Function, TArgument extends Argument<TCallback>>(
+  cb: TCallback,
+  delay = 1000,
+) => {
+  let shouldWait = false;
+  let waitingArgs: Array<unknown> | null;
+
+  const timeoutFunc = () => {
+    if (waitingArgs == null) {
+      shouldWait = false;
+    } else {
+      cb(...waitingArgs);
+      waitingArgs = null;
+      setTimeout(timeoutFunc, delay);
+    }
+  };
+
+  return (...args: TArgument) => {
+    if (shouldWait) {
+      waitingArgs = args;
+      return;
+    }
+
+    cb(...args);
+    shouldWait = true;
+    setTimeout(timeoutFunc, delay);
+  };
+};

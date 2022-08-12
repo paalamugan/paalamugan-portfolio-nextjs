@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function useReSize<T extends Record<string, any>>(ref: T) {
-  const [size, setSize] = useState({});
+  const [size, setSize] = useState<DOMRectReadOnly | {}>({});
 
   useEffect(() => {
     if (ref.current == null) return;

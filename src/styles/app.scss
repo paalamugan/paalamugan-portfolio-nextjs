@@ -20,7 +20,7 @@
   --secondary-color: 237 242 248;
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
-  --gray-color: #565b64;
+  --gray-color: #45484e;
   --brown-color: #46364a;
   --white-color: #ffffff;
   --loading-grey: #ededed;
@@ -35,8 +35,8 @@
   --tooltip-arrow-size: 5px;
   --tooltip-font-size: 14px;
   --tooltip-gap: 6px;
-  --tooltip-color: var(--gray-color);
-  --tooltip-bg-color: rgba(255, 255, 255, 1);
+  --tooltip-color: var(--black-color);
+  --tooltip-bg-color: var(--white-color);
   --tooltip-animation-sec: 150ms;
 }
 
@@ -122,7 +122,7 @@ svg {
   font-size: 1rem;
   text-align: left;
   line-height: 1.5;
-  @apply text-gray-500;
+  @apply text-gray-700;
 
   @media screen and (min-width: 1000px) {
     font-size: 0.9rem;

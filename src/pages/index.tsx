@@ -5,7 +5,7 @@ import Footer from "@app/container/Footer/Footer";
 import Home from "@app/container/Home/Home";
 import About from "@app/container/About/About";
 import Knowledge from "@app/container/Knowledge/Knowledge";
-import Services from "@app/container/Services/Services";
+import Certifications from "@app/container/Certifications/Certifications";
 import Work from "@app/container/Work/Work";
 import Skills from "@app/container/Skills/Skills";
 import Testimonial from "@app/container/Testimonial/Testimonial";
@@ -34,7 +34,7 @@ const LandingPage = () => {
         {withSection(Home, "home")}
         {withSection(About, "about")}
         {withSection(Knowledge, "knowledge")}
-        {withSection(Services, "services")}
+        {withSection(Certifications, "certifications")}
         {withSection(Work, "work")}
         {withSection(Skills, "skills")}
         {withSection(Testimonial, "testimonial")}
