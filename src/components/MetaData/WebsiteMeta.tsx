@@ -39,9 +39,9 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
       <meta name="twitter:site" content="@PaalMugan" />
       <meta name="twitter:creator" content="@PaalMugan" />
 
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" crossOrigin="fonts.gstatic.com" />
-      {/* <link
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" crossOrigin="anonymous" />
+      <link
         rel="preload"
         href="//fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZOIHQ.woff2"
         as="font"
@@ -61,7 +61,7 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
         as="font"
         type="font/woff2"
         crossOrigin="fonts.gstatic.com"
-      /> */}
+      />
 
       <script type="application/ld+json">
         {`
