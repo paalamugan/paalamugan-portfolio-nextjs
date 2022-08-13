@@ -11,7 +11,10 @@ export const WorkElement = (work: WorkType) => {
       className={`${style["app__skills-exp-work"]} tooltip-container`}
     >
       <h3 className="bold-text app__flex">
-        {work.name} <BsFillQuestionCircleFill className="ml-1" />
+        {work.name}
+        <div className="ml-1">
+          <BsFillQuestionCircleFill />
+        </div>
       </h3>
       <p className="p-text">{work.company}</p>
       <div

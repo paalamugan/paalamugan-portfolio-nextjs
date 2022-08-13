@@ -6,7 +6,7 @@
   align-items: center;
 
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(255, 255, 255, 0.18);
 
   @media screen and (max-width: 768px) {
@@ -59,7 +59,7 @@
       }
 
       a {
-        color: var(--gray-color);
+        @apply text-gray-800;
         text-decoration: none;
         flex-direction: column;
 
@@ -160,7 +160,7 @@
           margin: 1rem;
 
           a {
-            color: var(--gray-color);
+            @apply text-gray-800;
             text-decoration: none;
             font-size: 1rem;
             font-weight: 500;
