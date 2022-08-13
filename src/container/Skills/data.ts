@@ -6,8 +6,8 @@ export const experiences = [
         name: "Senior Software Engineer - Full Stack",
         company: "Quantiphi Analytics Solution",
         desc: `
-          <div class="mb-2">Have been Worked with client such as <strong>Arizona Health Care Cost Containment System (AHCCCS)</strong>, <strong>General Motors based on USA</strong>, and many more.</div> 
-          <div class="mb-2">Customized <strong>Dialogflow Messenger</strong> chatbot functionality using javascript.</div>
+          <div>Have been Worked with client such as <strong>Arizona Health Care Cost Containment System (AHCCCS)</strong>, <strong>General Motors based on USA</strong>, and many more.</div> 
+          <div>Customized <strong>Dialogflow Messenger</strong> chatbot functionality using javascript.</div>
           <div>Developed and maintained backend services for the chatbot.</div>
         `,
       },
@@ -20,8 +20,8 @@ export const experiences = [
         name: "Software Engineer",
         company: "NamLabs Technologies Private Ltd,",
         desc: `
-          <div class="mb-2">Have been Worked as a Full stack web developer with company own Product such as <strong>Atatus</strong>, <strong>UI Inspector</strong>, <strong>ReplayBird</strong>, <strong>LeadMine</strong>.</div> 
-          <div class="mb-2">Used to work with top frontend framework such as <strong>AngularJS</strong>, <strong>React</strong>, <strong>Vue</strong> and <strong>Svelte</strong>. Most time used to work with backend framework such as <strong>NodeJS</strong> and <strong>Python</strong>.</div>
+          <div>Have been Worked as a Full stack web developer with company own Product such as <strong>Atatus</strong>, <strong>UI Inspector</strong>, <strong>ReplayBird</strong>, <strong>LeadMine</strong>.</div> 
+          <div>Used to work with top frontend framework such as <strong>AngularJS</strong>, <strong>React</strong>, <strong>Vue</strong> and <strong>Svelte</strong>. Most time used to work with backend framework such as <strong>NodeJS</strong> and <strong>Python</strong>.</div>
           <div>Worked on various projects and maintained the codebase.</div>
         `,
       },
@@ -53,7 +53,10 @@ export const experiences = [
       {
         name: "Junior Software Engineer",
         company: "Add-on Technology Private Ltd.",
-        desc: "Worked as <strong>MEAN Stack Developer</strong> where as i have implemented Bakery internal Application(<strong>Anumod Bakery</strong>) using MEAN stack technology.",
+        desc: `
+          <div>Worked as <strong>MEAN Stack Developer</strong> where as i have implemented Bakery internal Application(<strong>Anumod Bakery</strong>) using MEAN stack technology.</div>
+          <div>Implemented the bakery application from scratch using <strong>Angular 6(released May 2018)</strong> as a frontend which is latest Angular at that time, <strong>NODEJS</strong> as a backend framework.</div>
+        `,
       },
     ],
   },
@@ -63,8 +66,9 @@ export const experiences = [
       {
         name: "Web Developer",
         company: "Muthu Soft Labs Private Ltd.",
-        desc: `Have been Worked as web developer and learned <strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong> and <strong>Photoshop</strong>. 
-          <div class="mt-2">Developed <strong>FinePaperSource UX Design</strong> using Photoshop.</div>
+        desc: `
+          <div>Have been Worked as web developer and learned <strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong> and <strong>Photoshop</strong>.</div>
+          <div>Developed <strong>FinePaperSource UX Design</strong> using Photoshop.</div>
         `,
       },
     ],

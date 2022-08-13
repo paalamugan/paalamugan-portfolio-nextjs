@@ -149,6 +149,9 @@
   padding: 1rem !important;
   text-align: center !important;
   font-size: 0.9rem;
+  div:not(:last-child) {
+    @apply mb-2;
+  }
   strong {
     @apply text-primary;
   }

@@ -6,9 +6,12 @@ import { AppWrap, MotionWrap } from "@app/wrapper";
 import { images, socialLinks } from "@app/constants";
 import { sendEmailMessage } from "@app/utils";
 import { MediaIcon } from "@app/components";
+import { BiLoaderCircle, FaPaperPlane } from "@app/lazy/react-icons";
 
 import style from "./Contact.module.scss";
-import { BiLoaderCircle, FaPaperPlane } from "@app/lazy/react-icons";
+
+const RESUME_URL = "/resume.pdf";
+const RESUME_DOWNLOAD_FILE_NAME = "paalamugan-resume.pdf";
 
 const Contact = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -150,8 +153,23 @@ const Contact = () => {
                   </span>
                   <div>
                     <h4>Resume</h4>
-                    <a href="/paalamugan-resume.pdf" target="_blank" download>
-                      Download Resume
+                    <a
+                      href={RESUME_URL}
+                      rel="noreferrer"
+                      target="_blank"
+                      download={RESUME_DOWNLOAD_FILE_NAME}
+                      className={style["resume-link"]}
+                    >
+                      Download
+                    </a>
+                    <span className="mx-1">|</span>
+                    <a
+                      href={RESUME_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={style["resume-link"]}
+                    >
+                      View
                     </a>
                   </div>
                 </div>
