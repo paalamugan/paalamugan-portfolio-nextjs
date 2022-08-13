@@ -39,12 +39,8 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
       <meta name="twitter:site" content="@PaalMugan" />
       <meta name="twitter:creator" content="@PaalMugan" />
 
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="https://fonts.gstatic.com"
-      />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" crossOrigin="https://fonts.gstatic.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" crossOrigin="anonymous" />
       {/* <link
         rel="preload"
         href="//fonts.gstatic.com/s/creepster/v13/AlZy_zVUqJz4yMrniH4Rcn35.woff2"
