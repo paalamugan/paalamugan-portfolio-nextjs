@@ -39,7 +39,7 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">
+      <h2 className="head-text mt-4">
         Checkout <span>Some of</span> my work
       </h2>
 

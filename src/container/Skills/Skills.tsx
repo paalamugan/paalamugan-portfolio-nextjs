@@ -10,7 +10,7 @@ import Skill from "./Skill";
 const Skills: FunctionComponent = () => {
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text mt-4">Skills & Experiences</h2>
 
       <div className={style["app__skills-container"]}>
         <div className={style["app__skills-list"]}>

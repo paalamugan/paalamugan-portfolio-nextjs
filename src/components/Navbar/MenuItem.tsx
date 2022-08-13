@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { NavLink } from "@app/constants";
 import { MotionLi } from "@app/lazy/framer-motion";
+import { getHeaderLink } from "@app/utils";
 
 const menuItemVariants = {
   open: {
@@ -28,9 +30,9 @@ interface MenuItemProps {
 
 const MenuItem = ({ id, value, toggleOpen }: MenuItemProps) => (
   <MotionLi variants={menuItemVariants}>
-    <a href={`#${id}`} onClick={() => toggleOpen()}>
-      {value}
-    </a>
+    <Link href={getHeaderLink(id)}>
+      <a onClick={() => toggleOpen()}>{value}</a>
+    </Link>
   </MotionLi>
 );
 

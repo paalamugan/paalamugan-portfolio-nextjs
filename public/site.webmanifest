@@ -1,7 +1,42 @@
 {
   "name": "Paalamugan || Senior Software Engineer",
   "short_name": "Paalamugan",
+  "description": "Software Engineer Website",
+  "shortcuts": [
+    {
+      "name": "Paalamugan || Senior Software Engineer",
+      "short_name": "Paalamugan",
+      "description": "Software Engineer Website",
+      "url": "/",
+      "icons": [
+        {
+          "src": "https://paalamugan.com/android-chrome-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://paalamugan.com/screenshots/home.png",
+      "sizes": "1971x986",
+      "type": "image/png",
+      "description": "Paalamugan - Home Page"
+    },
+    {
+      "src": "https://paalamugan.com/screenshots/about.png",
+      "sizes": "1971x986",
+      "type": "image/png",
+      "description": "Paalamugan - About Page"
+    }
+  ],
+  "orientation": "any",
   "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
@@ -13,7 +48,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "start_url": ".",
+  "theme_color": "#000000",
   "background_color": "#ffffff",
   "display": "standalone"
 }

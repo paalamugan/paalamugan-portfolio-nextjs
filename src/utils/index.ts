@@ -1,4 +1,5 @@
 import config from "@app/config";
+import { HOME_KEY, NavLink } from "@app/constants";
 import { Argument } from "@app/types";
 
 /**
@@ -118,4 +119,13 @@ export const throttle = <TCallback extends Function, TArgument extends Argument<
     shouldWait = true;
     setTimeout(timeoutFunc, delay);
   };
+};
+
+/**
+ * It takes a value of type NavLink and returns a string
+ * @param {NavLink} key - NavLink
+ * @returns A function that takes a value and returns a string.
+ */
+export const getHeaderLink = (key: NavLink) => {
+  return key === HOME_KEY ? "/" : `#${key}`;
 };

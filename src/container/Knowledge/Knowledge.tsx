@@ -35,7 +35,7 @@ const abouts = [
 const Knowledge = () => {
   return (
     <>
-      <h2 className="head-text">
+      <h2 className="head-text mt-4">
         I Know that <span>Good Architecture</span> <br />
         means <span>Good Solution</span>
       </h2>

@@ -11,7 +11,8 @@ import { images, navLinks } from "@app/constants";
 import { useClickOutside } from "@app/hooks";
 
 import style from "./Navbar.module.scss";
-import { throttle } from "@app/utils";
+import { getHeaderLink, throttle } from "@app/utils";
+import useMediaQuery from "@app/hooks/useMediaQuery";
 
 const Menu = dynamic(() => import("./Menu" /* webpackChunkName: "Navbar-Menu" */), { ssr: false });
 
@@ -39,6 +40,9 @@ const Navbar = () => {
   const [navbarOpen, toggleNavbarOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const navbarRef = useRef<HTMLElement>(null);
+  const mobileNavBarOpened = useRef(false);
+
+  const isMobileView = useMediaQuery("(max-width: 1060px)");
 
   useEffect(() => {
     const handleScroll = throttle(() => {
@@ -65,6 +69,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
+    mobileNavBarOpened.current = isOpen;
     if (isOpen) {
       return toggleNavbarOpen(isOpen);
     }
@@ -79,7 +84,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   useClickOutside(menuRef, () => {
-    if (isOpen) toggleOpen();
+    if (mobileNavBarOpened.current) toggleOpen();
   });
 
   return (
@@ -111,31 +116,34 @@ const Navbar = () => {
             key={`link-${key}`}
           >
             <div />
-            <a href={`#${key}`} onClick={() => setCurrentActiveLink(key)}>
-              {value}
-            </a>
+            <Link href={getHeaderLink(key)}>
+              <a onClick={() => setCurrentActiveLink(key)}>{value}</a>
+            </Link>
           </li>
         ))}
       </ul>
-      <MotionDiv
-        ref={menuRef}
-        className={style["app__navbar-menu"]}
-        initial={false}
-        animate={isOpen ? "open" : "closed"}
-      >
-        <HiMenu
-          onClick={() => {
-            toggleOpen();
-          }}
-        />
+      {isMobileView && (
         <LazyMotionDiv
-          className={`${navbarOpen ? "visible" : "invisible"}`}
-          variants={navbarVariants}
+          ref={menuRef}
+          className={style["app__navbar-menu"]}
+          initial={false}
+          animate={isOpen ? "open" : "closed"}
         >
-          <HiX onClick={() => toggleOpen()} />
-          <Menu toggleOpen={toggleOpen} />
+          <HiMenu
+            onClick={() => {
+              toggleOpen();
+            }}
+          />
+
+          <MotionDiv
+            className={`${navbarOpen ? "visible" : "invisible"}`}
+            variants={navbarVariants}
+          >
+            <HiX onClick={() => toggleOpen()} />
+            <Menu toggleOpen={toggleOpen} />
+          </MotionDiv>
         </LazyMotionDiv>
-      </MotionDiv>
+      )}
     </nav>
   );
 };

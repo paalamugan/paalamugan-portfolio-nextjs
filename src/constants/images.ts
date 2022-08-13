@@ -38,6 +38,7 @@ import spotify from "../assets/spotify.png";
 import gmail from "../assets/gmail.webp";
 import location from "../assets/location.webp";
 import social from "../assets/social.webp";
+import resume from "../assets/resume.webp";
 
 import sun from "../assets/sun.png";
 import moon from "../assets/moon.png";
@@ -95,6 +96,7 @@ const images = {
   gmail,
   location,
   social,
+  resume,
   sun,
   moon,
   work,

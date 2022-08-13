@@ -23,8 +23,23 @@
       margin-top: 0;
       color: #6e7373;
       line-height: 1.7rem;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 400;
+      @media screen and (max-width: 900px) {
+        font-size: 1rem;
+      }
+    }
+
+    a[download] {
+      color: rgb(var(--primary-color));
+      font-size: 0.9rem;
+      font-weight: 500;
+      &:hover {
+        text-decoration: underline;
+      }
+      @media screen and (max-width: 900px) {
+        font-size: 1rem;
+      }
     }
 
     label {
@@ -121,6 +136,9 @@
     .mail_text {
       color: rgb(var(--primary-color));
       font-weight: 600;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     svg.loading {

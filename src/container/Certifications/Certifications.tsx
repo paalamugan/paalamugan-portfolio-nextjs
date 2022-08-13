@@ -7,7 +7,7 @@ import Certification from "./Certification";
 const Certifications = () => {
   return (
     <>
-      <h2 className="mb-10 head-text">Certifications</h2>
+      <h2 className="mb-10 head-text mt-4">Certifications</h2>
 
       <div className={style["certification-container"]}>
         {certifications.map(({ title, className, image, url }) => (

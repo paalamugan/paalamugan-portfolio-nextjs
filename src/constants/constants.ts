@@ -1,8 +1,9 @@
 import { ProgrammingLanguagesType } from "@app/types";
 import * as icons from "./icons";
 
+export const HOME_KEY = "home";
 export const navLink = {
-  home: "HOME",
+  [HOME_KEY]: "HOME",
   about: "ABOUT",
   knowledge: "KNOWLEDGE",
   certifications: "CERTIFICATIONS",

@@ -1,5 +1,6 @@
 import { navLinks } from "@app/constants";
-import { capitalizeCase } from "@app/utils";
+import { capitalizeCase, getHeaderLink } from "@app/utils";
+import Link from "next/link";
 
 import style from "./NavigationDots.module.scss";
 
@@ -11,13 +12,13 @@ const NavigationDots = ({ active }: NavigationDotsProps) => {
   return (
     <div className={style["app__navigation"]}>
       {navLinks.map(([key, value]) => (
-        <a
-          title={capitalizeCase(value)}
-          href={`#${key}`}
-          key={key}
-          className={style["app__navigation-dot"]}
-          style={active === key ? { backgroundColor: "rgb(var(--primary-color))" } : {}}
-        />
+        <Link key={key} href={getHeaderLink(key)}>
+          <a
+            title={capitalizeCase(value)}
+            className={style["app__navigation-dot"]}
+            style={active === key ? { backgroundColor: "rgb(var(--primary-color))" } : {}}
+          />
+        </Link>
       ))}
     </div>
   );

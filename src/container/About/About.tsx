@@ -18,7 +18,7 @@ const About = () => {
   const { year } = getTotalExperience();
   return (
     <>
-      <h2 className="head-text">
+      <h2 className="head-text mt-4">
         About <span>Me</span>
       </h2>
       <div className={`w-full ${style["app__about-container"]} 2xl:w-4/5`}>

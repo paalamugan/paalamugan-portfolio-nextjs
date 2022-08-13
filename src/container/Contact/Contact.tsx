@@ -65,7 +65,7 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className="head-text">
+      <h2 className="head-text mt-4">
         Get In <span>Touch</span>
       </h2>
       <div className={style["app__contact-container"]}>
@@ -89,7 +89,7 @@ const Contact = () => {
               </div>
               <div className={`mb-5 ${style["contact_note_bottom"]}`}>
                 <div className={style["contact_info"]}>
-                  <span className="mt-1 mr-3 text-primary">
+                  <span className="mt-1 mr-3">
                     <Image src={images.gmail} alt="Gmail" width={18} height={18} layout="fixed" />
                   </span>
                   <div>
@@ -98,7 +98,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className={style["contact_info"]}>
-                  <span className="mt-1 mr-3 text-primary">
+                  <span className="mt-1 mr-3">
                     <Image
                       src={images.social}
                       alt="Social Media"
@@ -130,7 +130,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className={style["contact_info"]}>
-                  <span className="mt-1 mr-3 text-primary">
+                  <span className="mt-1 mr-3">
                     <Image
                       src={images.location}
                       alt="Location"
@@ -142,6 +142,17 @@ const Contact = () => {
                   <div>
                     <h4>Location</h4>
                     <p>Chennai, India</p>
+                  </div>
+                </div>
+                <div className={style["contact_info"]}>
+                  <span className="mt-1 mr-3">
+                    <Image src={images.resume} alt="Resume" width={18} height={18} layout="fixed" />
+                  </span>
+                  <div>
+                    <h4>Resume</h4>
+                    <a href="/paalamugan-resume.pdf" target="_blank" download>
+                      Download Resume
+                    </a>
                   </div>
                 </div>
               </div>

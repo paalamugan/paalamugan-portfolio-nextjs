@@ -28,7 +28,7 @@ const Testimonial = () => {
     <>
       {testimonials.length && (
         <>
-          <h2 className="mb-12 head-text">Testimonial</h2>
+          <h2 className="mb-12 head-text mt-4">Testimonial</h2>
           {/* <Image src={urlFor(testimonials[currentIndex].imgurl)} alt={testimonials[currentIndex].name} /> */}
           {/* <Image src={testimonials[currentIndex].imgurl} alt={testimonials[currentIndex].name} /> */}
           {testimonials.map(

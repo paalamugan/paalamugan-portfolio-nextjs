@@ -30,7 +30,7 @@ const Home = () => {
             <span>👋</span>
             <div className="ml-5">
               <p className="p-text">Hi there, I am</p>
-              <h1 className={"head-text"}>Paalamugan</h1>
+              <h1 className="head-text">Paalamugan</h1>
             </div>
           </div>
 
