@@ -1,5 +1,5 @@
-import { withSuspense } from "@app/components/Suspense";
 import dynamic from "next/dynamic";
+import { withSuspense } from "@app/components/Suspense";
 
 export type LazyHiMenu = typeof import("@react-icons/all-files/hi/HiMenu").HiMenu;
 export type LazyHiX = typeof import("@react-icons/all-files/hi/HiX").HiX;
@@ -256,23 +256,21 @@ export const LazyAiFillGithub = dynamic(
   },
 ) as LazyAiFillGithub;
 
-export const HiMenu = withSuspense<LazyHiMenu>(LazyHiMenu);
-export const HiX = withSuspense<LazyHiX>(LazyHiX);
-export const FaAngleUp = withSuspense<LazyFaAngleUp>(LazyFaAngleUp);
-export const FaGithub = withSuspense<LazyFaGithub>(LazyFaGithub);
-export const FaLinkedin = withSuspense<LazyFaLinkedin>(LazyFaLinkedin);
-export const FaFacebookF = withSuspense<LazyFaFacebookF>(LazyFaFacebookF);
-export const FaTwitter = withSuspense<LazyFaTwitter>(LazyFaTwitter);
-export const FaInstagram = withSuspense<LazyFaInstagram>(LazyFaInstagram);
-export const FaPaperPlane = withSuspense<LazyFaPaperPlane>(LazyFaPaperPlane);
-export const BiLoaderCircle = withSuspense<LazyBiLoaderCircle>(LazyBiLoaderCircle);
-export const HiChevronLeft = withSuspense<LazyHiChevronLeft>(LazyHiChevronLeft);
-export const HiChevronRight = withSuspense<LazyHiChevronRight>(LazyHiChevronRight);
-export const FaStar = withSuspense<LazyFaStar>(LazyFaStar);
-export const ImQuotesRight = withSuspense<LazyImQuotesRight>(LazyImQuotesRight);
-export const ImQuotesLeft = withSuspense<LazyImQuotesLeft>(LazyImQuotesLeft);
-export const AiFillEye = withSuspense<LazyAiFillEye>(LazyAiFillEye);
-export const AiFillGithub = withSuspense<LazyAiFillGithub>(LazyAiFillGithub);
-export const BsFillQuestionCircleFill = withSuspense<LazyBsFillQuestionCircleFill>(
-  LazyBsFillQuestionCircleFill,
-);
+export const HiMenu = withSuspense(LazyHiMenu);
+export const HiX = withSuspense(LazyHiX);
+export const FaAngleUp = withSuspense(LazyFaAngleUp);
+export const FaGithub = withSuspense(LazyFaGithub);
+export const FaLinkedin = withSuspense(LazyFaLinkedin);
+export const FaFacebookF = withSuspense(LazyFaFacebookF);
+export const FaTwitter = withSuspense(LazyFaTwitter);
+export const FaInstagram = withSuspense(LazyFaInstagram);
+export const FaPaperPlane = withSuspense(LazyFaPaperPlane);
+export const BiLoaderCircle = withSuspense(LazyBiLoaderCircle);
+export const HiChevronLeft = withSuspense(LazyHiChevronLeft);
+export const HiChevronRight = withSuspense(LazyHiChevronRight);
+export const FaStar = withSuspense(LazyFaStar);
+export const ImQuotesRight = withSuspense(LazyImQuotesRight);
+export const ImQuotesLeft = withSuspense(LazyImQuotesLeft);
+export const AiFillEye = withSuspense(LazyAiFillEye);
+export const AiFillGithub = withSuspense(LazyAiFillGithub);
+export const BsFillQuestionCircleFill = withSuspense(LazyBsFillQuestionCircleFill);

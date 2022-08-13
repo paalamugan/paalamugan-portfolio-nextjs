@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import { useEffect } from "react";
 import { useAnimation } from "framer-motion";
-import { MotionDiv } from "@app/lazy/framer-motion";
+import { motion } from "framer-motion";
 
 import style from "./TestimonialItem.module.scss";
 import { FaStar, ImQuotesLeft, ImQuotesRight } from "@app/lazy/react-icons";
@@ -30,12 +30,12 @@ const TestimonialItem = ({
   }, [animate, controls]);
 
   return (
-    <MotionDiv
+    <motion.div
       className={`${style["app__testimonial-item"]} app__flex`}
       animate={controls}
       transition={{ duration: 1 }}
     >
-      <MotionDiv className={style["app__testimonial-content"]}>
+      <div className={style["app__testimonial-content"]}>
         <div className="flex justify-between w-full text-2xl text-gray-600">
           <ImQuotesLeft />
           <ImQuotesRight />
@@ -69,8 +69,8 @@ const TestimonialItem = ({
             </a>
           </div>
         </div>
-      </MotionDiv>
-    </MotionDiv>
+      </div>
+    </motion.div>
   );
 };
 

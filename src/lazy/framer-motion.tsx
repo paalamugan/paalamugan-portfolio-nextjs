@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
 import dynamic from "next/dynamic";
 import { withSuspense } from "@app/components/Suspense";
 
@@ -9,7 +8,7 @@ export type LazyMotionDiv = typeof import("framer-motion").motion.div;
 export type LazyMotionA = typeof import("framer-motion").motion.a;
 export type LazyMotionImg = typeof import("framer-motion").motion.img;
 
-export const LazyMotionUl = dynamic(
+export const FrameMotionUl = dynamic(
   () =>
     import("framer-motion" /* webpackChunkName: "framer-motion-ul" */).then((mod) => ({
       default: mod.motion.ul,
@@ -20,7 +19,7 @@ export const LazyMotionUl = dynamic(
   },
 ) as LazyMotionUl;
 
-export const LazyMotionLi = dynamic(
+export const FrameMotionLi = dynamic(
   () =>
     import("framer-motion" /* webpackChunkName: "framer-motion-li" */).then((mod) => ({
       default: mod.motion.li,
@@ -31,7 +30,7 @@ export const LazyMotionLi = dynamic(
   },
 ) as LazyMotionLi;
 
-export const LazyMotionA = dynamic(
+export const FrameMotionA = dynamic(
   () =>
     import("framer-motion" /* webpackChunkName: "framer-motion-a" */).then((mod) => ({
       default: mod.motion.a,
@@ -42,7 +41,7 @@ export const LazyMotionA = dynamic(
   },
 ) as LazyMotionA;
 
-export const LazyMotionDiv = dynamic(
+export const FrameMotionDiv = dynamic(
   () =>
     import("framer-motion" /* webpackChunkName: "framer-motion-div" */).then((mod) => ({
       default: mod.motion.div,
@@ -53,7 +52,7 @@ export const LazyMotionDiv = dynamic(
   },
 ) as LazyMotionDiv;
 
-export const LazyMotionImg = dynamic(
+export const FrameMotionImg = dynamic(
   () =>
     import("framer-motion" /* webpackChunkName: "framer-motion-img" */).then((mod) => ({
       default: mod.motion.img,
@@ -64,15 +63,21 @@ export const LazyMotionImg = dynamic(
   },
 ) as LazyMotionImg;
 
-export const MotionUl = withSuspense<LazyMotionUl>(LazyMotionUl, {
+export const LazyMotionUl = withSuspense(FrameMotionUl);
+export const LazyMotionLi = withSuspense(FrameMotionLi);
+export const LazyMotionA = withSuspense(FrameMotionA);
+export const LazyMotionDiv = withSuspense(FrameMotionDiv);
+export const LazyMotionImg = withSuspense(FrameMotionImg);
+
+export const MotionUl = withSuspense(FrameMotionUl, {
   fallback: (props) => <ul className={props.className}>{props.children}</ul>,
 });
 
-export const MotionLi = withSuspense<LazyMotionLi>(LazyMotionLi, {
+export const MotionLi = withSuspense(FrameMotionLi, {
   fallback: (props) => <li className={props.className}>{props.children}</li>,
 });
 
-export const MotionA = withSuspense<LazyMotionA>(LazyMotionA, {
+export const MotionA = withSuspense(FrameMotionA, {
   fallback: (props) => (
     <a className={props.className} href={props.href}>
       {props.children}
@@ -80,11 +85,11 @@ export const MotionA = withSuspense<LazyMotionA>(LazyMotionA, {
   ),
 });
 
-export const MotionDiv = withSuspense<LazyMotionDiv>(LazyMotionDiv, {
+export const MotionDiv = withSuspense(FrameMotionDiv, {
   fallback: (props) => <div className={props.className}>{props.children}</div>,
 });
 
-export const MotionImg = withSuspense<LazyMotionImg>(LazyMotionImg, {
+export const MotionImg = withSuspense(FrameMotionImg, {
   fallback: (props) => (
     <img
       alt={props.alt}

@@ -1,8 +1,8 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { images } from "@app/constants";
 
-import { MotionDiv } from "@app/lazy/framer-motion";
 import style from "./Knowledge.module.scss";
 
 const abouts = [
@@ -42,7 +42,7 @@ const Knowledge = () => {
 
       <div className={style["app__profiles"]}>
         {abouts.map((about) => (
-          <MotionDiv
+          <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 1, type: "spring" }}
@@ -59,7 +59,7 @@ const Knowledge = () => {
             />
             <h2 className="bold-text mt-5 mb-3">{about.title}</h2>
             <p className="p-text">{about.description}</p>
-          </MotionDiv>
+          </motion.div>
         ))}
       </div>
     </>

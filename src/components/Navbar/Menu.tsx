@@ -1,5 +1,5 @@
 import { navLinks } from "@app/constants";
-import { MotionUl } from "@app/lazy/framer-motion";
+import { motion } from "framer-motion";
 import MenuItem from "./MenuItem";
 
 const navigationVariants = {
@@ -17,11 +17,11 @@ interface MenuProps {
 
 const Menu = ({ toggleOpen }: MenuProps) => {
   return (
-    <MotionUl variants={navigationVariants}>
+    <motion.ul variants={navigationVariants}>
       {navLinks.map(([id, value]) => (
         <MenuItem key={`menu-${id}`} id={id} value={value} toggleOpen={toggleOpen} />
       ))}
-    </MotionUl>
+    </motion.ul>
   );
 };
 

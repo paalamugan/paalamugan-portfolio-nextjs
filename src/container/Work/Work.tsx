@@ -1,40 +1,38 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
-import { LazyMotionDiv, MotionDiv } from "@app/lazy/framer-motion";
+import { AiFillEye, AiFillGithub } from "@app/lazy/react-icons";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { programmingLanguages, workTabs } from "@app/constants";
 import { WorksData } from "@app/types";
-
-import { worksData } from "./data";
+import { worksData as works } from "./data";
 
 import style from "./Work.module.scss";
-import { AiFillEye, AiFillGithub } from "@app/lazy/react-icons";
+
+type WorkTab = typeof workTabs[number];
 
 const Work = () => {
-  const [works, setWorks] = useState<WorksData[]>([]);
-  const [filterWork, setFilterWork] = useState<WorksData[]>([]);
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState<WorkTab>("All");
+  const [filterWork, setFilterWork] = useState<WorksData[]>(works);
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    setWorks(worksData);
-    setFilterWork(worksData);
-  }, []);
-
-  const handleWorkFilter = (item: string) => {
-    setActiveFilter(item);
-    setAnimateCard({ y: 100, opacity: 0 });
-
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setAnimateCard({ y: 0, opacity: 1 });
 
-      if (item === "All") {
-        setFilterWork(works);
+      if (activeFilter === "All") {
+        setFilterWork([...works]);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item.toLowerCase())));
+        setFilterWork([...works.filter((work) => work.tags.includes(activeFilter.toLowerCase()))]);
       }
     }, 500);
+    return () => clearTimeout(timer);
+  }, [activeFilter]);
+
+  const handleWorkFilter = (item: WorkTab) => {
+    setActiveFilter(item);
+    setAnimateCard({ y: 100, opacity: 0 });
   };
 
   return (
@@ -57,7 +55,7 @@ const Work = () => {
         ))}
       </div>
 
-      <MotionDiv
+      <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className={style["app__work-portfolio"]}
@@ -74,7 +72,7 @@ const Work = () => {
                 height={230}
               />
 
-              <MotionDiv
+              <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: "easeInOut", staggerChildren: 0.5 }}
                 className={`${style["app__work-portfolio-hover"]} app__flex`}
@@ -85,14 +83,14 @@ const Work = () => {
                   rel="noopener noreferrer"
                   aria-label={`View ${work.title} Demo`}
                 >
-                  <LazyMotionDiv
+                  <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
                     transition={{ duration: 0.25 }}
                     className="app__flex"
                   >
                     <AiFillEye />
-                  </LazyMotionDiv>
+                  </motion.div>
                 </a>
                 <a
                   href={work.codeLink}
@@ -100,16 +98,16 @@ const Work = () => {
                   rel="noopener noreferrer"
                   aria-label={`View ${work.title} Github`}
                 >
-                  <LazyMotionDiv
+                  <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
                     transition={{ duration: 0.25 }}
                     className="app__flex"
                   >
                     <AiFillGithub />
-                  </LazyMotionDiv>
+                  </motion.div>
                 </a>
-              </MotionDiv>
+              </motion.div>
             </div>
 
             <div className={style["app__work-portfolio-content"]}>
@@ -147,7 +145,7 @@ const Work = () => {
             </div>
           </div>
         ))}
-      </MotionDiv>
+      </motion.div>
     </>
   );
 };

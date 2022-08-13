@@ -1,11 +1,10 @@
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { useCycle } from "framer-motion";
 import { HiMenu, HiX } from "@app/lazy/react-icons";
 
-import { MotionDiv, LazyMotionDiv } from "@app/lazy/framer-motion";
+import { motion } from "framer-motion";
 
 import { images, navLinks } from "@app/constants";
 import { useClickOutside } from "@app/hooks";
@@ -14,7 +13,7 @@ import style from "./Navbar.module.scss";
 import { getHeaderLink, throttle } from "@app/utils";
 import useMediaQuery from "@app/hooks/useMediaQuery";
 
-const Menu = dynamic(() => import("./Menu" /* webpackChunkName: "Navbar-Menu" */), { ssr: false });
+import Menu from "./Menu";
 
 const navbarVariants = {
   open: {
@@ -123,7 +122,7 @@ const Navbar = () => {
         ))}
       </ul>
       {isMobileView && (
-        <LazyMotionDiv
+        <motion.div
           ref={menuRef}
           className={style["app__navbar-menu"]}
           initial={false}
@@ -135,14 +134,14 @@ const Navbar = () => {
             }}
           />
 
-          <MotionDiv
+          <motion.div
             className={`${navbarOpen ? "visible" : "invisible"}`}
             variants={navbarVariants}
           >
             <HiX onClick={() => toggleOpen()} />
             <Menu toggleOpen={toggleOpen} />
-          </MotionDiv>
-        </LazyMotionDiv>
+          </motion.div>
+        </motion.div>
       )}
     </nav>
   );

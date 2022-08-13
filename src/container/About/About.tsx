@@ -1,18 +1,8 @@
-import dynamic from "next/dynamic";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { getTotalExperience } from "@app/utils";
 
-import { MotionDiv } from "@app/lazy/framer-motion";
-import { withSuspense } from "@app/components/Suspense";
-
+import LottieAnimation from "./LottieAnimation";
 import style from "./About.module.scss";
-
-const LazyLottieAnimation = dynamic(
-  () => import("./LottieAnimation" /* webpackChunkName: "LottieAnimation" */),
-  { suspense: true, ssr: false },
-);
-
-const LottieAnimation = withSuspense(LazyLottieAnimation);
 
 const About = () => {
   const { year } = getTotalExperience();
@@ -23,7 +13,7 @@ const About = () => {
       </h2>
       <div className={`w-full ${style["app__about-container"]} 2xl:w-4/5`}>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <MotionDiv className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center">
             <p className={style["p-text-lg"]}>
               I love learning new things. Having {year}+ year of experience in MEAN & MERN Stack
               development and more enthusiasm for my work. Able to work independently, as a part of
@@ -44,7 +34,7 @@ const About = () => {
               years at a leading IT enabled business company known as Quantiphi Analytics Private
               Ltd.
             </p>
-          </MotionDiv>
+          </div>
           <LottieAnimation />
         </div>
       </div>

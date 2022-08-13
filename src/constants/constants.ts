@@ -7,8 +7,8 @@ export const navLink = {
   about: "ABOUT",
   knowledge: "KNOWLEDGE",
   certifications: "CERTIFICATIONS",
-  skills: "SKILLS",
   work: "WORK",
+  skills: "SKILLS",
   testimonial: "TESTIMONIAL",
   contact: "CONTACT",
 } as const;
@@ -57,7 +57,7 @@ export const jobPositions = [
   "Web Developer",
 ];
 
-export const workTabs = ["All", "React", "Angular", "Svelte", "Nodejs"];
+export const workTabs = ["All", "React", "Angular", "Svelte", "Nodejs"] as const;
 
 export const programmingLanguages: ProgrammingLanguagesType = {
   angular: {
