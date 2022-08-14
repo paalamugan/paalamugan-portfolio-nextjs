@@ -90,7 +90,7 @@ const Navbar = () => {
     <nav ref={navbarRef} className={style["app__navbar"]}>
       <div className={style["app__navbar-logo"]}>
         <Link href="/">
-          <a>
+          <a className="flex">
             <Image
               src={images.logoWhite}
               alt="Logo"
