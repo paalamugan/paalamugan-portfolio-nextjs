@@ -36,8 +36,11 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:url" content={canonical} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@PaalMugan" />
       <meta name="twitter:creator" content="@PaalMugan" />
+
+      <link rel="manifest" href="/manifest.webmanifest" />
 
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" crossOrigin="anonymous" />
