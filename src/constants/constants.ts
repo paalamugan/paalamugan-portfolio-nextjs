@@ -47,12 +47,13 @@ export const socialLinks = [
 ];
 
 export const jobPositions = [
-  "Frontend Developer",
-  "Backend Developer",
-  "Fullstack Developer",
+  "Software Engineer",
+  "FrontEnd Developer",
+  "BackEnd Developer",
+  "Full Stack Developer",
   "MERN Stack Developer",
   "MEAN Stack Developer",
-  "Nodejs Developer",
+  "NodeJs Developer",
   "Javascript Developer",
   "Web Developer",
 ];

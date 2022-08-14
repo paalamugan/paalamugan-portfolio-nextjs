@@ -13,7 +13,6 @@ interface ReactTypedProps {
 
 const ReactTyped = ({ style, className, children, strings, ...rest }: ReactTypedProps) => {
   const typedRef = useRef<HTMLDivElement>(null);
-  const mounted = useRef(false);
   const typewriter = useRef<any>(null);
 
   const typedOptions = useMemo(() => rest, [rest]);
