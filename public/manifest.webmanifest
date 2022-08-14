@@ -1,7 +1,7 @@
 {
   "name": "Paalamugan || Senior Software Engineer",
   "short_name": "Paalamugan",
-  "description": "Software Engineer Website",
+  "description": "Software Engineer Portfolio Website",
   "start_url": "/",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
@@ -25,13 +25,13 @@
       "src": "https://paalamugan.com/screenshots/home.png",
       "sizes": "1971x986",
       "type": "image/png",
-      "description": "Home Page - Paalamugan"
+      "description": "Home - Paalamugan || Senior Software Engineer"
     },
     {
       "src": "https://paalamugan.com/screenshots/about.png",
       "sizes": "1971x986",
       "type": "image/png",
-      "description": "About Page - Paalamugan"
+      "description": "About - Paalamugan || Senior Software Engineer"
     }
   ],
   "orientation": "any",
