@@ -45,7 +45,7 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" crossOrigin="anonymous" />
-      <link
+      {/* <link
         rel="preload"
         href="//fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZOIHQ.woff2"
         as="font"
@@ -65,7 +65,7 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
         as="font"
         type="font/woff2"
         crossOrigin="fonts.gstatic.com"
-      />
+      /> */}
 
       <script type="application/ld+json">
         {`
