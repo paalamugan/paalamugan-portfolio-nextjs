@@ -1,11 +1,14 @@
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { getTotalExperience } from "@app/utils";
+import useIntersectionObserver from "@app/hooks/useIntersectionObserver";
 
 import LottieAnimation from "./LottieAnimation";
 import style from "./About.module.scss";
 
 const About = () => {
   const { year } = getTotalExperience();
+  const [isIntersecting, ref] = useIntersectionObserver();
+
   return (
     <>
       <h2 className="head-text mt-4">
@@ -35,7 +38,9 @@ const About = () => {
               Ltd.
             </p>
           </div>
-          <LottieAnimation />
+          <div className="flex" ref={ref}>
+            {isIntersecting && <LottieAnimation />}
+          </div>
         </div>
       </div>
     </>

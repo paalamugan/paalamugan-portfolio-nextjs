@@ -9,11 +9,13 @@ const LottieAnimation: FC<LottieAnimationProps> = ({}) => {
   >();
 
   useEffect(() => {
-    import("./lottie-animation.json").then(setLottieAnimation);
+    import("./lottie-animation.json" /* webpackChunkName: "lottie-animation-data" */).then(
+      setLottieAnimation,
+    );
   }, []);
 
   return (
-    <div className="flex justify-end">
+    <div className="flex justify-center lg:justify-end w-full lg:ml-12">
       {!!lottieAnimation && (
         <LottiePlayerLight
           play

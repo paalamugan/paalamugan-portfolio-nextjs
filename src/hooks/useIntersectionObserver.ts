@@ -29,6 +29,9 @@ export const useIntersectionObserver = (
   useEffect(() => {
     if (!elemRef.current) return;
     let isUnmounted = false;
+
+    if (typeof IntersectionObserver === "undefined") return setIsIntersecting(true);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (isUnmounted) return;
@@ -42,7 +45,7 @@ export const useIntersectionObserver = (
     );
     observer.observe(elemRef.current);
     return () => {
-      observer.disconnect();
+      observer && observer.disconnect();
       isUnmounted = true;
     };
   }, [onIntersection, options]);
