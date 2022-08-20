@@ -3,23 +3,30 @@ import "@app/styles/app.scss";
 
 import MetaData, { getMetaImageUrl } from "@app/components/MetaData";
 import config from "@app/config";
+import images from "@app/constants/images";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   const { siteUrl, title, description, image } = pageProps;
-  const _title = title || "Paalamugan || Senior Software Engineer";
-  const _description =
+  const newTitle = title || "Paalamugan || Senior Software Engineer";
+  const newDescription =
     description ||
     "Senior Software Engineer - Full Stack Developer | Javascript Developer | MEAN Stack Developer | MERN Stack Developer | JAM Stack Developer | Nodejs Developer | Frontend Developer | Backend Developer";
-  const _siteUrl = siteUrl || config.siteUrl;
+  const newSiteUrl = siteUrl || config.siteUrl;
 
-  const _image = image || getMetaImageUrl(_siteUrl);
+  let newImage = image || images.homePage;
+  newImage.src = getMetaImageUrl(newSiteUrl, newImage.src);
 
   return (
     <>
-      <MetaData siteUrl={_siteUrl} image={_image} title={_title} description={_description} />
+      <MetaData
+        siteUrl={newSiteUrl}
+        image={newImage}
+        title={newTitle}
+        description={newDescription}
+      />
       <Component {...pageProps} />
     </>
   );
-}
+};
 
 export default MyApp;

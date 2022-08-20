@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { useRouter } from "next/router";
 import { resolve } from "@app/utils";
 
@@ -7,7 +8,7 @@ interface MetaDataProps {
   siteUrl: string;
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
 }
 
 const MetaData = ({ siteUrl, title, description, image }: MetaDataProps) => {

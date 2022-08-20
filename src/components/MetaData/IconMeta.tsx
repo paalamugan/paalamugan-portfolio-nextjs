@@ -1,22 +1,7 @@
 import Head from "next/head";
 
-interface ImageMetaProps {
-  image: string;
-  title: string;
-}
-
-const ImageMeta = ({ image, title }: ImageMetaProps) => (
+const IconMeta = () => (
   <Head>
-    <meta name="twitter:image" content={image} />
-
-    {/* These are the image sizes of the SEO feature images */}
-    <meta property="og:image" content={image} />
-    <meta property="og:image:width" content="1912" />
-    <meta property="og:image:height" content="978" />
-    <meta property="og:image:alt" content={title} />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:secure_url" content={image} />
-
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180x180.png" />
 
@@ -31,4 +16,4 @@ const ImageMeta = ({ image, title }: ImageMetaProps) => (
   </Head>
 );
 
-export default ImageMeta;
+export default IconMeta;
