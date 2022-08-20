@@ -14,15 +14,14 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
     <Head>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <meta httpEquiv="Content-Security-Policy" content="img-src 'self' data:;" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta
         name="keywords"
         content="software developer, software engineer, senior software engineer, full stack developer, mean stack developer, mern stack developer, javascript developer, frontend developer, backend developer, nodejs developer, jam stack developer, freelance developer"
       />
-      <meta name="theme-color" content="#ffffff" />
+      <meta name="theme-color" content="#313bac" />
 
       <link rel="canonical" href={canonical} />
       <meta property="og:url" content={canonical} />
@@ -41,10 +40,10 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
       <meta name="twitter:creator" content="@PaalMugan" />
 
       <link rel="manifest" href="/manifest.webmanifest" />
-      
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" crossOrigin="anonymous" />
       {/* <link
         rel="preload"
         href="//fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZOIHQ.woff2"
@@ -76,8 +75,8 @@ const WebsiteMeta = ({ siteUrl, canonical, title, description, image }: WebsiteM
               "image": {
                   "@type": "ImageObject",
                   "url": "${image}",
-                  "width": 1000,
-                  "height": 563
+                  "width": 1912,
+                  "height": 978
               },
               "mainEntityOfPage": {
                   "@type": "WebPage",
