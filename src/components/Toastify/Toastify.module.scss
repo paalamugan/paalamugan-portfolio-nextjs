@@ -1,0 +1,109 @@
+.toastify {
+  display: inline-block;
+  &__container {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    width: 20rem;
+    padding: 0.25rem;
+    z-index: 9999;
+  }
+  &__toast {
+    position: relative;
+    min-height: 4rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    max-height: 50rem;
+    overflow: hidden;
+    cursor: pointer;
+    direction: ltr;
+    animation: toastify-bounceInRight 0.7s;
+    animation-fill-mode: both;
+    background-color: #fff;
+    color: #757575;
+    font-family: sans-serif;
+
+    &-body {
+      margin: auto 0;
+      flex: 1 1 auto;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      & > div:last-child {
+        flex: 1;
+      }
+    }
+
+    &-icon {
+      margin-inline-end: 10px;
+      width: 20px;
+      flex-shrink: 0;
+      display: flex;
+      > svg {
+        fill: #07bc0c;
+      }
+    }
+  }
+
+  &__close-button {
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #000;
+    opacity: 0.3;
+    transition: 0.3s ease;
+    align-self: flex-start;
+    &:hover {
+      opacity: 1;
+    }
+    & > svg {
+      fill: currentColor;
+      height: 16px;
+      width: 14px;
+    }
+  }
+
+  @keyframes toastify-bounceInRight {
+    0%,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+      opacity: 0;
+      transform: translate3d(3000px, 0, 0);
+    }
+    60% {
+      opacity: 1;
+      transform: translate3d(-25px, 0, 0);
+    }
+    75% {
+      transform: translate3d(10px, 0, 0);
+    }
+    90% {
+      transform: translate3d(-5px, 0, 0);
+    }
+    to {
+      transform: none;
+    }
+  }
+  @keyframes toastify-bounceOutRight {
+    20% {
+      opacity: 1;
+      transform: translate3d(-20px, 0, 0);
+    }
+    to {
+      opacity: 0;
+      transform: translate3d(2000px, 0, 0);
+    }
+  }
+}

@@ -2,7 +2,8 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { AiFillEye, AiFillGithub } from "@app/lazy/react-icons";
+import { AiFillEye } from "@react-icons/all-files/ai/AiFillEye";
+import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { programmingLanguages, workTabs } from "@app/constants";
 import { WorksData } from "@app/types";

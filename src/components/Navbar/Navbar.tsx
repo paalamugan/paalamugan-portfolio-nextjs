@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { useCycle } from "framer-motion";
-import { HiMenu, HiX } from "@app/lazy/react-icons";
+import { HiMenu } from "@react-icons/all-files/hi/HiMenu";
+import { HiX } from "@react-icons/all-files/hi/HiX";
 
 import { motion } from "framer-motion";
 

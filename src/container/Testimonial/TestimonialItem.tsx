@@ -4,7 +4,9 @@ import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 
 import style from "./TestimonialItem.module.scss";
-import { FaStar, ImQuotesLeft, ImQuotesRight } from "@app/lazy/react-icons";
+import { FaStar } from "@react-icons/all-files/fa/FaStar";
+import { ImQuotesLeft } from "@react-icons/all-files/im/ImQuotesLeft";
+import { ImQuotesRight } from "@react-icons/all-files/im/ImQuotesRight";
 
 interface TestimonialItemProps {
   name: string;

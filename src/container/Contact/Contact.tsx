@@ -1,14 +1,16 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { ContactFormData } from "@app/types";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { images, socialLinks } from "@app/constants";
 import { sendEmailMessage } from "@app/utils";
 import { MediaIcon } from "@app/components";
-import { BiLoaderCircle, FaPaperPlane } from "@app/lazy/react-icons";
+import { FaPaperPlane } from "@react-icons/all-files/fa/FaPaperPlane";
+import { BiLoaderCircle } from "@react-icons/all-files/bi/BiLoaderCircle";
 
 import style from "./Contact.module.scss";
+import ToastifySuccess, { ToastifySuccessRef } from "@app/components/Toastify/ToastifySuccess";
 
 const RESUME_URL = "/resume.pdf";
 const RESUME_DOWNLOAD_FILE_NAME = "paalamugan-resume.pdf";
@@ -21,6 +23,11 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const toastifySuccessRef = useRef<ToastifySuccessRef>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const subjectRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const { name, email, message, subject } = formData;
 
@@ -33,22 +40,20 @@ const Contact = () => {
     e.preventDefault();
     if (loading) return;
 
-    const { toast } = await import("react-toastify");
-
     if (!formData.name) {
-      return toast.error("Please enter your name");
+      return nameRef.current?.focus();
     }
 
     if (!formData.email) {
-      return toast.error("Please enter your email");
+      return emailRef.current?.focus();
     }
 
     if (!formData.subject) {
-      return toast.error("Please enter your subject");
+      return subjectRef.current?.focus();
     }
 
     if (!formData.message) {
-      return toast.error("Please enter your message");
+      return messageRef.current?.focus();
     }
 
     setLoading(true);
@@ -56,10 +61,10 @@ const Contact = () => {
     sendEmailMessage(formData as unknown as Record<string, unknown>)
       .then(() => {
         setFormData({ name: "", email: "", subject: "", message: "" });
-        toast.success(`Thank you for reach out to me, I will get back to you soon.`);
+        toastifySuccessRef.current?.show();
       })
-      .catch(() => {
-        toast.error("Something went wrong. Please try again later.");
+      .catch((error) => {
+        console.error(error);
       })
       .finally(() => {
         setLoading(false);
@@ -185,6 +190,7 @@ const Contact = () => {
                       Name<span className={style["text-danger"]}>*</span>
                     </label>
                     <input
+                      ref={nameRef}
                       id="name"
                       name="name"
                       type="text"
@@ -200,6 +206,7 @@ const Contact = () => {
                       Email<span className={style["text-danger"]}>*</span>
                     </label>
                     <input
+                      ref={emailRef}
                       id="email"
                       name="email"
                       type="email"
@@ -216,6 +223,7 @@ const Contact = () => {
                     Subject<span className={style["text-danger"]}>*</span>
                   </label>
                   <input
+                    ref={subjectRef}
                     id="subject"
                     name="subject"
                     type="text"
@@ -231,6 +239,7 @@ const Contact = () => {
                     Message<span className={style["text-danger"]}>*</span>
                   </label>
                   <textarea
+                    ref={messageRef}
                     id="mesage"
                     className={style["form-control"]}
                     name="message"
@@ -264,6 +273,10 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ToastifySuccess
+        ref={toastifySuccessRef}
+        message="Thank you for reach out to me, I will get back to you asap."
+      />
     </>
   );
 };

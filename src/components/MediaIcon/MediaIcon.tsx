@@ -1,4 +1,8 @@
-import { FaInstagram, FaTwitter, FaFacebookF, FaGithub, FaLinkedin } from "@app/lazy/react-icons";
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
+import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
+import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
+import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 
 const MediaIcon = ({ icon, children, ...rest }: any) => {
   switch (icon) {

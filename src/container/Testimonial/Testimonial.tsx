@@ -2,7 +2,8 @@ import { useState } from "react";
 
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import TestimonialItem from "./TestimonialItem";
-import { HiChevronLeft, HiChevronRight } from "@app/lazy/react-icons";
+import { HiChevronLeft } from "@react-icons/all-files/hi/HiChevronLeft";
+import { HiChevronRight } from "@react-icons/all-files/hi/HiChevronRight";
 
 import { testimonialsData as testimonials } from "./data";
 import style from "./Testimonial.module.scss";

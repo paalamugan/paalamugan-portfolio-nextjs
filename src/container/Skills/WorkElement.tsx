@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BsFillQuestionCircleFill } from "@app/lazy/react-icons";
+import { BsFillQuestionCircleFill } from "@react-icons/all-files/bs/BsFillQuestionCircleFill";
 import { WorkType } from "@app/types";
 import style from "./Skills.module.scss";
 
