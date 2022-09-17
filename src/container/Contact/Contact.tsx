@@ -8,6 +8,7 @@ import { sendEmailMessage } from "@app/utils";
 import { MediaIcon } from "@app/components";
 import { FaPaperPlane } from "@react-icons/all-files/fa/FaPaperPlane";
 import { BiLoaderCircle } from "@react-icons/all-files/bi/BiLoaderCircle";
+import useIntersectionObserver from "@app/hooks/useIntersectionObserver";
 
 import style from "./Contact.module.scss";
 import ToastifySuccess, { ToastifySuccessRef } from "@app/components/Toastify/ToastifySuccess";
@@ -28,6 +29,8 @@ const Contact = () => {
   const emailRef = useRef<HTMLInputElement>(null);
   const subjectRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  const [isSocialMediaInterSecting, contactNoteRef] = useIntersectionObserver();
 
   const { name, email, message, subject } = formData;
 
@@ -95,7 +98,7 @@ const Contact = () => {
                   .&nbsp;😊
                 </p>
               </div>
-              <div className={`mb-5 ${style["contact_note_bottom"]}`}>
+              <div className={`mb-5 ${style["contact_note_bottom"]}`} ref={contactNoteRef}>
                 <div className={style["contact_info"]}>
                   <span className="mt-1 mr-3">
                     <Image src={images.gmail} alt="Gmail" width={18} height={18} layout="fixed" />
@@ -105,38 +108,40 @@ const Contact = () => {
                     <p>contact@paalamugan.com</p>
                   </div>
                 </div>
-                <div className={style["contact_info"]}>
-                  <span className="mt-1 mr-3">
-                    <Image
-                      src={images.social}
-                      alt="Social Media"
-                      width={18}
-                      height={18}
-                      layout="fixed"
-                    />
-                  </span>
-                  <div>
-                    <h4>Social Media</h4>
-                    <ul className={`flex mt-1 ${style["list-unstyled"]}`}>
-                      {socialLinks.map((social) => (
-                        <li key={social.icon}>
-                          <a
-                            href={social.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            aria-label={social.icon}
-                            title={social.icon}
-                          >
-                            <MediaIcon
-                              icon={social.icon}
-                              style={{ color: `var(--${social.icon}-color)` }}
-                            />
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
+                {isSocialMediaInterSecting && (
+                  <div className={style["contact_info"]}>
+                    <span className="mt-1 mr-3">
+                      <Image
+                        src={images.social}
+                        alt="Social Media"
+                        width={18}
+                        height={18}
+                        layout="fixed"
+                      />
+                    </span>
+                    <div>
+                      <h4>Social Media</h4>
+                      <ul className={`flex mt-1 ${style["list-unstyled"]}`}>
+                        {socialLinks.map((social) => (
+                          <li key={social.icon}>
+                            <a
+                              href={social.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              aria-label={social.icon}
+                              title={social.icon}
+                            >
+                              <MediaIcon
+                                icon={social.icon}
+                                style={{ color: `var(--${social.icon}-color)` }}
+                              />
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                </div>
+                )}
                 <div className={style["contact_info"]}>
                   <span className="mt-1 mr-3">
                     <Image

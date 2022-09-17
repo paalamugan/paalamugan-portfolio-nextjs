@@ -11,8 +11,15 @@ import ApigeeApiDesign from "@app/assets/certifications/apigee-api-design.png";
 import ContactCenterAI from "@app/assets/certifications/contact-center-ai.png";
 import WebsiteGoogleCloud from "@app/assets/certifications/website-google-cloud.png";
 import NodejsIntroductoryCourse from "@app/assets/certifications/nodejs-introductory-course.jpg";
+import freecodecampJavascriptAlgorithms from "@app/assets/certifications/freecodecamp-javascript-algorithms-and-data-structures.png";
 
 export const certifications = [
+  {
+    title: "JavaScript Algorithms and Data Structures",
+    image: freecodecampJavascriptAlgorithms,
+    className: "rounded-lg",
+    url: "https://www.freecodecamp.org/certification/fcc8740be82-d43d-41ff-b557-5e248dc14612/javascript-algorithms-and-data-structures",
+  },
   {
     title: "NodeJS Introductory Course",
     image: NodejsIntroductoryCourse,

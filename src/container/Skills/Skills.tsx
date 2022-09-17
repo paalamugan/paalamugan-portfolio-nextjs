@@ -1,11 +1,15 @@
-import { FunctionComponent } from "react";
+import type { FunctionComponent } from "react";
+import dynamic from "next/dynamic";
 
 import { AppWrap, MotionWrap } from "@app/wrapper";
 
 import { experiences, skills } from "./data";
 import { WorkElement } from "./WorkElement";
 import style from "./Skills.module.scss";
-import Skill from "./Skill";
+
+const Skill = dynamic(() => import("./Skill" /* webpackChunkName: "Skill" */), {
+  ssr: false,
+});
 
 const Skills: FunctionComponent = () => {
   return (
