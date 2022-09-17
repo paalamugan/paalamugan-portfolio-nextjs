@@ -26,12 +26,6 @@
       "sizes": "1912x978",
       "type": "image/png",
       "description": "Home - Paalamugan || Senior Software Engineer"
-    },
-    {
-      "src": "https://paalamugan.com/screenshots/about.png",
-      "sizes": "1912x978",
-      "type": "image/png",
-      "description": "About - Paalamugan || Senior Software Engineer"
     }
   ],
   "orientation": "any",
