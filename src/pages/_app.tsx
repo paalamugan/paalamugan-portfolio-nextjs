@@ -13,7 +13,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     "Senior Software Engineer - Full Stack Developer | Javascript Developer | MEAN Stack Developer | MERN Stack Developer | JAM Stack Developer | Nodejs Developer | Frontend Developer | Backend Developer";
   const newSiteUrl = siteUrl || config.siteUrl;
 
-  let newImage = image || images.iconSmall;
+  let newImage = image || images.homePageSmall;
   newImage.src = getMetaImageUrl(newSiteUrl, newImage.src);
 
   return (
