@@ -1,4 +1,5 @@
 import homePage from "../../public/screenshots/home.png";
+import homePageSmall from "../../public/screenshots/home-500x256.png";
 import email from "../assets/email.png";
 import mobile from "../assets/mobile.png";
 import api from "../assets/api.png";
@@ -62,6 +63,7 @@ const work = {
 
 const images = {
   homePage,
+  homePageSmall,
   email,
   mobile,
   api,
