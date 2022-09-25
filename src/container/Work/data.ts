@@ -23,7 +23,7 @@ export const worksData: WorksData[] = [
     {
       name: 'CMS Blog',
       imgUrl: images.work.cmsBlog,
-      projectLink: 'https://cms-blog-post.herokuapp.com',
+      projectLink: 'https://cms-post-blog.vercel.app',
       codeLink: 'https://github.com/paalamugan/cms-blog',
       title: 'CMS Blog',
       description: 'It helps to create authenticate blog posts, and users can also comments the specific posts.',
