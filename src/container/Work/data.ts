@@ -41,7 +41,7 @@ export const worksData: WorksData[] = [
     {
       name: 'Employee Payslip Generator',
       imgUrl: images.work.employeePayslipGenerator,
-      projectLink: 'https://employee-payslip-generator.herokuapp.com',
+      projectLink: 'https://employee-payslip-generator.vercel.app',
       codeLink: 'https://github.com/paalamugan/employee-payslip-generator',
       title: 'Employee Payslip Generator',
       description: 'Generate a Employee monthly payslip download as pdf and send to their mail.',
