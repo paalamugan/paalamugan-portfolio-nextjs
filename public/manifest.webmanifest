@@ -20,14 +20,6 @@
       ]
     }
   ],
-  "screenshots": [
-    {
-      "src": "https://paalamugan.com/screenshots/home.png",
-      "sizes": "1912x978",
-      "type": "image/png",
-      "description": "Home - Paalamugan || Senior Software Engineer"
-    }
-  ],
   "orientation": "any",
   "icons": [
     {
