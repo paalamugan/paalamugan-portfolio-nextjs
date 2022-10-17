@@ -31,7 +31,7 @@ export const socialLinks = [
   },
   {
     name: "Twitter",
-    url: "https://twitter.com/paalmugan",
+    url: "https://twitter.com/paalamugan_s",
     icon: "twitter",
   },
   {
