@@ -95,18 +95,17 @@ const Navbar = () => {
   return (
     <nav ref={navbarRef} className={style["app__navbar"]}>
       <div className={style["app__navbar-logo"]}>
-        <Link href="/">
-          <a className="flex">
-            <Image
-              src={images.logoWhite}
-              alt="Logo"
-              layout="fixed"
-              width={256}
-              height={40}
-              priority
-              className="cursor-pointer"
-            />
-          </a>
+        <Link href="/" className="flex">
+
+          <Image
+            src={images.logoWhite}
+            alt="Logo"
+            layout="fixed"
+            width={256}
+            height={40}
+            priority
+            className="cursor-pointer"
+          />
 
           {/* <div className={`text-4xl font-bold ${style["logo-font"]} cursor-pointer`}>
             <span className="text-black">PAALA</span>
@@ -121,8 +120,8 @@ const Navbar = () => {
             key={`link-${key}`}
           >
             <div />
-            <Link href={getHeaderLink(key)}>
-              <a onClick={() => setCurrentActiveLink(key)}>{value}</a>
+            <Link href={getHeaderLink(key)} onClick={() => setCurrentActiveLink(key)}>
+              {value}
             </Link>
           </li>
         ))}

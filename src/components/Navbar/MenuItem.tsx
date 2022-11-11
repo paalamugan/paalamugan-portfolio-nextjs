@@ -30,8 +30,8 @@ interface MenuItemProps {
 
 const MenuItem = ({ id, value, toggleOpen }: MenuItemProps) => (
   <motion.li variants={menuItemVariants}>
-    <Link href={getHeaderLink(id)}>
-      <a onClick={() => toggleOpen()}>{value}</a>
+    <Link href={getHeaderLink(id)} onClick={() => toggleOpen()}>
+      {value}
     </Link>
   </motion.li>
 );

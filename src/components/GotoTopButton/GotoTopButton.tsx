@@ -25,10 +25,10 @@ const GotoTopButton = () => {
 
   return (
     <div ref={ref} className={`app__flex text-white ${style["app__goto-top"]}`}>
-      <Link href="/">
-        <a title="Home" aria-label="Home">
-          <FaAngleUp className="h-8" />
-        </a>
+      <Link href="/" title="Home" aria-label="Home">
+
+        <FaAngleUp className="h-8" />
+
       </Link>
     </div>
   );
