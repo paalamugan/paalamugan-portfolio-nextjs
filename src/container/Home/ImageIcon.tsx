@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import style from "./Home.module.scss";
 
 function ImageIcon({ index, circle }: { index: number; circle: any }) {

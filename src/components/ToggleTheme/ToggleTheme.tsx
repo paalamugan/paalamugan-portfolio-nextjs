@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useContext } from "react";
 import { ThemeContext } from "@app/context";
 import { images } from "@app/constants";

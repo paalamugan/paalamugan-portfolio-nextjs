@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { StaticImageData } from "next/image";
+import { StaticImageData } from "next/legacy/image";
 import type { FC } from "react";
 
 interface OpenGraphMetaProps {

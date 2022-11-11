@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { StaticImageData } from "next/image";
+import { StaticImageData } from "next/legacy/image";
 import IconMeta from "./IconMeta";
 import OpenGraphMeta from "./OpenGraphMeta";
 import TwitterMeta from "./TwitterMeta";

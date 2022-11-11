@@ -1,4 +1,4 @@
-import NextImage, { ImageLoaderProps, ImageProps } from "next/image";
+import NextImage, { ImageLoaderProps, ImageProps } from "next/legacy/image";
 // import config from "@app/config";
 
 // const customLoader = ({ src, width, quality }: ImageLoaderProps) => {

@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from "next/legacy/image";
 import { useRouter } from "next/router";
 import { resolve } from "@app/utils";
 

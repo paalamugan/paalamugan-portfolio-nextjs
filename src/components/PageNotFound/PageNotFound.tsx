@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import notFound from "@app/assets/404.svg";
 
 import style from "./PageNotFound.module.scss";

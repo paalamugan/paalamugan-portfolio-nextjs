@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { images } from "@app/constants";
