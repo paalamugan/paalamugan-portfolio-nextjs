@@ -15,6 +15,7 @@ import { getHeaderLink, throttle } from "@app/utils";
 import useMediaQuery from "@app/hooks/useMediaQuery";
 
 import Menu from "./Menu";
+import { useRouter } from "next/router";
 
 const navbarVariants = {
   open: {
@@ -41,6 +42,7 @@ const Navbar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const navbarRef = useRef<HTMLElement>(null);
   const mobileNavBarOpened = useRef(false);
+  const router = useRouter();
 
   const isMobileView = useMediaQuery("(max-width: 1060px)");
 
@@ -65,6 +67,9 @@ const Navbar = () => {
 
   useEffect(() => {
     const { hash } = window.location;
+    const search = new URLSearchParams(router.asPath);
+    console.log("router", router);
+    console.log("search", search);
     setCurrentActiveLink(hash ? hash.slice(1) : navLinks[0][0]);
   }, []);
 

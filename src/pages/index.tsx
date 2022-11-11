@@ -1,7 +1,5 @@
 import { NextComponentType, PageConfig } from "next";
 
-import Header from "@app/container/Header/Header";
-import Footer from "@app/container/Footer/Footer";
 import Home from "@app/container/Home/Home";
 import About from "@app/container/About/About";
 import Knowledge from "@app/container/Knowledge/Knowledge";
@@ -13,6 +11,7 @@ import Contact from "@app/container/Contact/Contact";
 
 import commonStyle from "@app/styles/module/common.module.scss";
 import { NavLink } from "@app/constants";
+import { MainLayout } from "@app/layouts/MainLayout";
 
 const withSection = (Component: NextComponentType, id: NavLink) => {
   return (
@@ -28,20 +27,16 @@ const withSection = (Component: NextComponentType, id: NavLink) => {
 
 const LandingPage = () => {
   return (
-    <div className={commonStyle.app}>
-      <Header />
-      <main>
-        {withSection(Home, "home")}
-        {withSection(About, "about")}
-        {withSection(Knowledge, "knowledge")}
-        {withSection(Certifications, "certifications")}
-        {withSection(Work, "work")}
-        {withSection(Skills, "skills")}
-        {withSection(Testimonial, "testimonial")}
-        {withSection(Contact, "contact")}
-      </main>
-      <Footer />
-    </div>
+    <MainLayout>
+      {withSection(Home, "home")}
+      {withSection(About, "about")}
+      {withSection(Knowledge, "knowledge")}
+      {withSection(Certifications, "certifications")}
+      {withSection(Work, "work")}
+      {withSection(Skills, "skills")}
+      {withSection(Testimonial, "testimonial")}
+      {withSection(Contact, "contact")}
+    </MainLayout>
   );
 };
 
