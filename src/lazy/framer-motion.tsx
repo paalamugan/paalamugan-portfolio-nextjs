@@ -15,7 +15,6 @@ export const FrameMotionUl = dynamic(
     })),
   {
     suspense: true,
-    ssr: false,
   },
 ) as LazyMotionUl;
 
@@ -26,7 +25,6 @@ export const FrameMotionLi = dynamic(
     })),
   {
     suspense: true,
-    ssr: false,
   },
 ) as LazyMotionLi;
 
@@ -37,7 +35,6 @@ export const FrameMotionA = dynamic(
     })),
   {
     suspense: true,
-    ssr: false,
   },
 ) as LazyMotionA;
 
@@ -48,7 +45,6 @@ export const FrameMotionDiv = dynamic(
     })),
   {
     suspense: true,
-    ssr: false,
   },
 ) as LazyMotionDiv;
 
@@ -59,7 +55,6 @@ export const FrameMotionImg = dynamic(
     })),
   {
     suspense: true,
-    ssr: false,
   },
 ) as LazyMotionImg;
 

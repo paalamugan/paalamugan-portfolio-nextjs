@@ -8,7 +8,6 @@ export const LazyLottiePlayerLight = dynamic(
     ),
   {
     suspense: true,
-    ssr: false,
   },
 );
 

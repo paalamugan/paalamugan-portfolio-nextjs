@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "@app/wrapper";
 import { images } from "@app/constants";
@@ -33,37 +33,33 @@ const abouts = [
 ];
 
 const Knowledge = () => {
-  return (
-    <>
-      <h2 className="head-text mt-4">
-        I Know that <span>Good Architecture</span> <br />
-        means <span>Good Solution</span>
-      </h2>
+  return <>
+    <h2 className="head-text mt-4">
+      I Know that <span>Good Architecture</span> <br />
+      means <span>Good Solution</span>
+    </h2>
 
-      <div className={style["app__profiles"]}>
-        {abouts.map((about) => (
-          <motion.div
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 1, type: "spring" }}
-            className={`cursor-pointer ${style["app__profile-item"]}`}
-            key={about.title}
-          >
-            <Image
-              src={about.imgUrl}
-              alt={about.title}
-              className="skeleton-loading"
-              layout="fixed"
-              width={210}
-              height={160}
-            />
-            <h2 className="bold-text mt-5 mb-3">{about.title}</h2>
-            <p className="p-text">{about.description}</p>
-          </motion.div>
-        ))}
-      </div>
-    </>
-  );
+    <div className={style["app__profiles"]}>
+      {abouts.map((about) => (
+        <motion.div
+          whileInView={{ opacity: 1 }}
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 1, type: "spring" }}
+          className={`cursor-pointer ${style["app__profile-item"]}`}
+          key={about.title}
+        >
+          <Image
+            src={about.imgUrl}
+            alt={about.title}
+            className="skeleton-loading"
+            width={210}
+            height={160} />
+          <h2 className="bold-text mt-5 mb-3">{about.title}</h2>
+          <p className="p-text">{about.description}</p>
+        </motion.div>
+      ))}
+    </div>
+  </>;
 };
 
 export default AppWrap(MotionWrap(Knowledge, style["app__knowledge"]), "knowledge", "bg-secondary");

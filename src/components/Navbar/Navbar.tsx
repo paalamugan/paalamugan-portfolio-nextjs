@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { useCycle } from "framer-motion";
@@ -100,12 +100,10 @@ const Navbar = () => {
           <Image
             src={images.logoWhite}
             alt="Logo"
-            layout="fixed"
             width={256}
             height={40}
             priority
-            className="cursor-pointer"
-          />
+            className="cursor-pointer" />
 
           {/* <div className={`text-4xl font-bold ${style["logo-font"]} cursor-pointer`}>
             <span className="text-black">PAALA</span>

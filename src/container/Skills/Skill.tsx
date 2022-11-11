@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { FunctionComponent } from "react";
 import { programmingLanguages } from "@app/constants";
 import { skills } from "./data";
@@ -23,7 +23,7 @@ const Skill: FunctionComponent<{ skill: typeof skills[number] }> = ({ skill }) =
         }}
       >
         {icon && (
-          <Image layout="fixed" src={icon} alt={`icon-${name}`} width={"50%"} height={"50%"} />
+          <Image src={icon} alt={`icon-${name}`} width={"50%"} height={"50%"} />
         )}
       </div>
       <p className="p-text">{name}</p>

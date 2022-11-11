@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import style from "./Home.module.scss";
 
 function ImageIcon({ index, circle }: { index: number; circle: any }) {
@@ -11,14 +11,12 @@ function ImageIcon({ index, circle }: { index: number; circle: any }) {
     >
       <Image
         src={circle}
-        layout="fixed"
         alt={`profile_bg-${index}`}
         width={index === 0 ? 65 : index === 1 ? 100 : 40}
         height={index === 0 ? 65 : index === 1 ? 100 : 40}
         onLoad={() => {
           SetShowSkeletonClass(false);
-        }}
-      />
+        }} />
     </div>
   );
 }
