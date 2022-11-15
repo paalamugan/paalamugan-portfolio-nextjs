@@ -72,8 +72,4 @@ const Testimonial = () => {
   );
 };
 
-export default AppWrap(
-  MotionWrap(Testimonial, style["app__testimonial"]),
-  "testimonial",
-  "bg-secondary",
-);
+export default AppWrap(MotionWrap(Testimonial), "testimonial", "bg-secondary");

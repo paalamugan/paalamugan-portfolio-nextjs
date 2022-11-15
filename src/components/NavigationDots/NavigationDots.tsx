@@ -12,14 +12,13 @@ const NavigationDots = ({ active }: NavigationDotsProps) => {
   return (
     <div className={style["app__navigation"]}>
       {navLinks.map(([key, value]) => (
-        (<Link
+        <Link
           key={key}
           href={getHeaderLink(key)}
           title={capitalizeCase(value)}
           className={style["app__navigation-dot"]}
-          style={active === key ? { backgroundColor: "rgb(var(--primary-color))" } : {}}>
-
-        </Link>)
+          style={active === key ? { backgroundColor: "rgb(var(--primary-color))" } : {}}
+        ></Link>
       ))}
     </div>
   );

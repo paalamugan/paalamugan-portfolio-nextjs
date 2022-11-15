@@ -1,7 +1,6 @@
 # *
 User-agent: *
-Allow: https://paalamugan.com
-Disallow: /cdn-cgi/l/email-protection
+Allow: /
 
 # Host
 Host: https://paalamugan.com

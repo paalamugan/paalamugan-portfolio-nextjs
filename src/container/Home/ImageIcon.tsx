@@ -12,11 +12,11 @@ function ImageIcon({ index, circle }: { index: number; circle: any }) {
       <Image
         src={circle}
         alt={`profile_bg-${index}`}
-        width={index === 0 ? 65 : index === 1 ? 100 : 40}
-        height={index === 0 ? 65 : index === 1 ? 100 : 40}
+        className="w-8/12"
         onLoad={() => {
           SetShowSkeletonClass(false);
-        }} />
+        }}
+      />
     </div>
   );
 }

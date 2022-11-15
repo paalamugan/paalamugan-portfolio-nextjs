@@ -7,7 +7,7 @@ export const experiences = [
         company: "Quantiphi Analytics Solution",
         desc: `
           <div>Have been Worked with client such as <strong>Arizona Health Care Cost Containment System (AHCCCS)</strong>, <strong>General Motors based on USA</strong>, and many more.</div> 
-          <div>Customized <strong>Dialogflow Messenger</strong> chatbot functionality using javascript.</div>
+          <div>Customized <strong>Dialogflow Messenger</strong> chatbot functionality using typescript.</div>
           <div>Developed and maintained backend services for the chatbot.</div>
         `,
       },
@@ -21,7 +21,7 @@ export const experiences = [
         company: "NamLabs Technologies Private Ltd,",
         desc: `
           <div>Have been Worked as a Full stack web developer with company own Product such as <strong>Atatus</strong>, <strong>UI Inspector</strong>, <strong>ReplayBird</strong>, <strong>LeadMine</strong>.</div> 
-          <div>Used to work with top frontend framework such as <strong>AngularJS</strong>, <strong>React</strong>, <strong>Vue</strong> and <strong>Svelte</strong>. Most time used to work with backend framework such as <strong>NodeJS</strong> and <strong>Python</strong>.</div>
+          <div>Used to work with top frontend framework such as <strong>Angular</strong>, <strong>React</strong>, <strong>Vue</strong> and <strong>Svelte</strong>. Most of the time used to work with backend framework such as <strong>NodeJS</strong> and <strong>Python</strong>.</div>
           <div>Worked on various projects and maintained the codebase.</div>
         `,
       },
@@ -55,7 +55,7 @@ export const experiences = [
         company: "Add-on Technology Private Ltd.",
         desc: `
           <div>Worked as <strong>MEAN Stack Developer</strong> where as i have implemented Bakery internal Application(<strong>Anumod Bakery</strong>) using MEAN stack technology.</div>
-          <div>Implemented the bakery application from scratch using <strong>Angular 6(released May 2018)</strong> as a frontend which is latest Angular at that time, <strong>NODEJS</strong> as a backend framework.</div>
+          <div>Implemented the bakery application from scratch using <strong>Angular 6(released May 2018)</strong> as a frontend which is latest Angular at that time, <strong>NODEJS with Express</strong> as a backend framework.</div>
         `,
       },
     ],
@@ -67,7 +67,7 @@ export const experiences = [
         name: "Web Developer",
         company: "Muthu Soft Labs Private Ltd.",
         desc: `
-          <div>Have been Worked as web developer and learned <strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong> and <strong>Photoshop</strong>.</div>
+          <div>Have been Worked as web developer and learned <strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong>, <strong>Angular</strong>, <strong>Nodejs</strong> and <strong>Photoshop</strong>.</div>
           <div>Developed <strong>FinePaperSource UX Design</strong> using Photoshop.</div>
         `,
       },

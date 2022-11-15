@@ -1,25 +1,17 @@
 @use "mixins";
 
-@import url("https://fonts.googleapis.com/css2?family=Creepster&family=DM+Sans:wght@400;500;700&display=swap");
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 @import "components";
 
-*,
-*::after,
-*::before {
-  --font-base: "DM Sans", sans-serif;
-  --font-creeper: "Creeper", sans-serif;
-
+:root {
   --primary-color: 49 59 172;
   --secondary-color: 237 242 248;
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #45484e;
-  --brown-color: #46364a;
   --white-color: #ffffff;
   --loading-grey: #ededed;
 
@@ -40,18 +32,8 @@
 
 html {
   font-size: 100.5%;
-  scroll-behavior: smooth;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
-}
-
-body {
-  @apply bg-secondary font-sansSerif;
+  scroll-behavior: smooth !important;
+  @apply font-dmSans;
 }
 
 svg {
@@ -139,4 +121,17 @@ svg {
 
 .skeleton-loading {
   @include mixins.skeleton-loading;
+}
+
+.certificate-border {
+  border: 1px solid #b9bcbd !important;
+  border-radius: 0.5rem;
+}
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
 }

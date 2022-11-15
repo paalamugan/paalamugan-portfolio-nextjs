@@ -58,8 +58,6 @@ export const jobPositions = [
   "Web Developer",
 ];
 
-export const workTabs = ["All", "React", "Angular", "Svelte", "Nodejs"] as const;
-
 export const programmingLanguages: ProgrammingLanguagesType = {
   angular: {
     name: "Angular",
@@ -169,9 +167,9 @@ export const programmingLanguages: ProgrammingLanguagesType = {
     bgColor: "#3770a11a",
     url: "https://www.python.org/",
   },
-  react: {
+  reactjs: {
     name: "React",
-    icon: icons.react,
+    icon: icons.reactjs,
     bgColor: "#5fe2fb1a",
     url: "https://reactjs.org/",
   },

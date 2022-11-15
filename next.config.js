@@ -11,9 +11,6 @@ const nextConfig = {
     dirs: ["."],
   },
   poweredByHeader: false,
-  // images: {
-  //   loader: "custom",
-  // },
 };
 
 module.exports = withBundleAnalyzer(nextConfig);

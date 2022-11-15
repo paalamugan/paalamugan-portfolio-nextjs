@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 function withOpacityValue(variable) {
   return ({ opacityValue }) => {
@@ -9,15 +10,9 @@ function withOpacityValue(variable) {
   };
 }
 
+/** @type {import('tailwindcss').Config} \*/
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./src/container/**/*.{js,ts,jsx,tsx}",
-    "./src/context/**/*.{js,ts,jsx,tsx}",
-    "./src/hooks/**/*.{js,ts,jsx,tsx}",
-    "./src/wrapper/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
       sm: "640px",
@@ -38,6 +33,7 @@ module.exports = {
       yellow: colors.amber,
       pink: colors.fuchsia,
       red: colors.red,
+      blue: colors.blue,
       transparent: "transparent",
       current: "currentColor",
       github: "var(--github-color)",
@@ -46,17 +42,15 @@ module.exports = {
       facebook: "var(--facebook-color)",
       instagram: "var(--instagram-color)",
     },
-    fontFamily: {
-      base: "var(--font-base)",
-      creeper: "var(--font-creeper)",
-      sansSerif: "sans-serif, serif",
-    },
     extend: {
       colors: {
         // Added some extra Tailwind CSS along with default colors
         blue: {
           950: "#17275c",
         },
+      },
+      fontFamily: {
+        dmSans: ["var(--font-dmSans)", ...defaultTheme.fontFamily.sans],
       },
       spacing: {
         128: "32rem",

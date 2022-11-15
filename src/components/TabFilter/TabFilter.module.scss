@@ -1,0 +1,36 @@
+.app__tab {
+  &-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &-item {
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background-color: #fff;
+      color: #000;
+      font-weight: 800;
+
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 0.5rem;
+
+      &:hover {
+        background-color: rgb(var(--primary-color));
+        color: #fff;
+      }
+
+      @media screen and (min-width: 2000px) {
+        padding: 1rem 2rem;
+        border-radius: 0.85rem;
+      }
+
+      &-active {
+        background-color: rgb(var(--primary-color));
+        color: #fff;
+      }
+    }
+  }
+}

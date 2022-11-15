@@ -70,7 +70,7 @@ const Home = () => {
         whileInView={scaleVariants.whileInView}
         className={style["app__home-circles"]}
       >
-        {[icons.react, icons.nodejs, icons.javascript].map((circle, index) => (
+        {[icons.reactjs, icons.nodejs, icons.javascript].map((circle, index) => (
           <ImageIcon key={index} circle={circle} index={index} />
         ))}
       </motion.div>

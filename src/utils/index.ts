@@ -127,5 +127,5 @@ export const throttle = <TCallback extends Function, TArgument extends Argument<
  * @returns A function that takes a value and returns a string.
  */
 export const getHeaderLink = (key: NavLink) => {
-  return key === HOME_KEY ? "/" : `#${key}`;
+  return key === HOME_KEY ? "/" : `/#${key}`;
 };

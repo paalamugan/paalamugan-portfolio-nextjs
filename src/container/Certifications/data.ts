@@ -1,80 +1,73 @@
-import style from "./Certification.module.scss";
-
-import GoogleCloudFundamentalsCoreInfrastructure from "@app/assets/certifications/google-cloud-fundamentals-core-infrastructure.png";
-import CloudEngineering from "@app/assets/certifications/cloud-engineering.png";
-import GoogleCloudEssentials from "@app/assets/certifications/google-cloud-essentials.png";
-import DialogflowES from "@app/assets/certifications/dialogflow-es.png";
-import DialogflowCX from "@app/assets/certifications/dialogflow-cx.png";
-import ApigeeApi from "@app/assets/certifications/apigee-api.png";
-import ApigeeApiSecurity from "@app/assets/certifications/apigee-api-security.png";
-import ApigeeApiDesign from "@app/assets/certifications/apigee-api-design.png";
-import ContactCenterAI from "@app/assets/certifications/contact-center-ai.png";
-import WebsiteGoogleCloud from "@app/assets/certifications/website-google-cloud.png";
+import hackerRankProblemSolvingIntermediate from "@app/assets/certifications/hackerrank-problem-solving-intermediate.png";
+import freeCodeCampFrontEndDevelopment from "@app/assets/certifications/freecodecamp-front-end-development.png";
+import freeCodeCampBackEndDevelopment from "@app/assets/certifications/freecodecamp-back-end-development.png";
+import freeCodeCampFullStack from "@app/assets/certifications/freecodecamp-full-stack.png";
 import NodejsIntroductoryCourse from "@app/assets/certifications/nodejs-introductory-course.jpg";
-import freecodecampJavascriptAlgorithms from "@app/assets/certifications/freecodecamp-javascript-algorithms-and-data-structures.png";
+import CloudEngineering from "@app/assets/certifications/cloud-engineering.png";
+import ApigeeApi from "@app/assets/certifications/apigee-api.png";
+import ContactCenterAI from "@app/assets/certifications/contact-center-ai.png";
+import hackerRankRestApiIntermediate from "@app/assets/certifications/hackerrank-rest-api-intermediate.png";
 
 export const certifications = [
   {
-    title: "JavaScript Algorithms and Data Structures",
-    image: freecodecampJavascriptAlgorithms,
+    title: "Front End Development",
+    image: freeCodeCampFrontEndDevelopment,
     className: "rounded-lg",
-    url: "https://www.freecodecamp.org/certification/fcc8740be82-d43d-41ff-b557-5e248dc14612/javascript-algorithms-and-data-structures",
+    url: "https://freecodecamp.org/certification/fcc8740be82-d43d-41ff-b557-5e248dc14612/front-end-development-libraries",
+    tags: ["freeCodeCamp"],
+  },
+  {
+    title: "Back End Development and APIs",
+    image: freeCodeCampBackEndDevelopment,
+    className: "rounded-lg",
+    url: "https://freecodecamp.org/certification/fcc8740be82-d43d-41ff-b557-5e248dc14612/back-end-development-and-apis",
+    tags: ["freeCodeCamp"],
+  },
+  {
+    title: "Full Stack Development",
+    image: freeCodeCampFullStack,
+    className: "rounded-lg",
+    url: "https://freecodecamp.org/certification/fcc8740be82-d43d-41ff-b557-5e248dc14612/full-stack",
+    tags: ["freeCodeCamp"],
   },
   {
     title: "NodeJS Introductory Course",
     image: NodejsIntroductoryCourse,
     className: "rounded-lg",
     url: "https://courses.nodejsacademy.com/certificates/a0vnqxnfhv",
+    tags: ["all"],
   },
   {
-    title: "Google Cloud Fundamentals: Core Infrastructure",
-    image: GoogleCloudFundamentalsCoreInfrastructure,
-    url: "https://partner.cloudskillsboost.google/public_profiles/30b21e32-378e-4044-baee-cd872fa2659d/badges/1801217",
+    title: "Problem Solving (Intermediate)",
+    image: hackerRankProblemSolvingIntermediate,
+    className: "rounded-lg",
+    url: "https://www.hackerrank.com/certificates/33db9094409a",
+    tags: ["hackerRank"],
+  },
+  {
+    title: "Rest API (Intermediate)",
+    image: hackerRankRestApiIntermediate,
+    className: "rounded-lg",
+    url: "https://www.hackerrank.com/certificates/adf9c4787eed",
+    tags: ["hackerRank"],
   },
   {
     title: "Cloud Engineering",
     image: CloudEngineering,
     url: "https://partner.cloudskillsboost.google/public_profiles/30b21e32-378e-4044-baee-cd872fa2659d/badges/1791116",
-  },
-  {
-    title: "Google Cloud Essentials",
-    image: GoogleCloudEssentials,
-    url: "https://partner.cloudskillsboost.google/public_profiles/30b21e32-378e-4044-baee-cd872fa2659d/badges/1790377",
-  },
-  {
-    title: "Website on Google Cloud",
-    image: WebsiteGoogleCloud,
-    url: "https://partner.cloudskillsboost.google/public_profiles/30b21e32-378e-4044-baee-cd872fa2659d/badges/1579191",
-  },
-  {
-    title: "Virtual Agent Development in Dialogflow ES for Software Devs",
-    image: DialogflowES,
-    url: "https://partner.cloudskillsboost.google/public_profiles/30b21e32-378e-4044-baee-cd872fa2659d/badges/1781256",
-  },
-  {
-    title: "Virtual Agent Development in Dialogflow CX for Software Devs",
-    image: DialogflowCX,
-    url: "https://partner.cloudskillsboost.google/public_profiles/30b21e32-378e-4044-baee-cd872fa2659d/badges/1781033",
+    tags: ["googleCloud"],
   },
   {
     title: "API Development on Google Cloud's Apigee API Platform",
     image: ApigeeApi,
     url: "https://partner.cloudskillsboost.google/public_profiles/30b21e32-378e-4044-baee-cd872fa2659d/badges/1761832",
-  },
-  {
-    title: "API Security on Google Cloud's Apigee API Platform (C2)",
-    image: ApigeeApiSecurity,
-    url: "https://partner.cloudskillsboost.google/public_profiles/30b21e32-378e-4044-baee-cd872fa2659d/badges/1752128",
-  },
-  {
-    title: "API Design and Fundamentals of Google Cloud's Apigee API Platform",
-    image: ApigeeApiDesign,
-    url: "https://partner.cloudskillsboost.google/public_profiles/30b21e32-378e-4044-baee-cd872fa2659d/badges/1740756",
+    tags: ["googleCloud"],
   },
   {
     title: "Customer Experiences with Contact Center AI",
     image: ContactCenterAI,
-    className: style["certificate-border"],
+    className: "certificate-border",
     url: "https://partner.cloudskillsboost.google/public_profiles/30b21e32-378e-4044-baee-cd872fa2659d/badges/1588411",
+    tags: ["googleCloud"],
   },
 ];

@@ -4,11 +4,14 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto;
   position: relative;
-  @apply bg-secondary;
-  @apply font-base;
+  @apply bg-secondary font-dmSans;
 
   &__container {
     width: 100%;
     min-height: 100vh;
+  }
+
+  main {
+    margin-top: 74px;
   }
 }

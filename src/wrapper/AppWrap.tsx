@@ -24,17 +24,17 @@ const AppWrap = (
   className: string = "",
   wrapperClassName: string = "",
 ) =>
-  (function HOC() {
+  function HOC() {
     return (
-      <div className={`${idName} ${style["app__sub-container"]}  ${className || ""}`}>
+      <div className={`${idName} ${style["app__sub-container"]} ${className || ""}`}>
         {idName === "home" && <SocialMedia />}
-        <div className={`${style["app__wrapper"]} ${wrapperClassName || ""} app__flex"`}>
+        <div className={`${style["app__wrapper"]} ${wrapperClassName || ""}`}>
           <Component />
         </div>
         <NavigationDots active={idName} />
         <GotoTopButton />
       </div>
     );
-  });
+  };
 
 export default AppWrap;

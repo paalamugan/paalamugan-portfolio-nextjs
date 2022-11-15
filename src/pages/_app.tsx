@@ -4,6 +4,7 @@ import "@app/styles/app.scss";
 import MetaData, { getMetaImageUrl } from "@app/components/MetaData";
 import config from "@app/config";
 import images from "@app/constants/images";
+import { dmSans } from "@app/fonts/dm-sans";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const { siteUrl, title, description, image } = pageProps;
@@ -18,6 +19,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
+      <style jsx global>{`
+        :root {
+          --font-dmSans: ${dmSans.style.fontFamily};
+        }
+      `}</style>
       <MetaData
         siteUrl={newSiteUrl}
         image={newImage}

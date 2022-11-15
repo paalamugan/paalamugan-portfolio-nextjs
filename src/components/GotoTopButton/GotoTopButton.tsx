@@ -4,12 +4,12 @@ import { FaAngleUp } from "@react-icons/all-files/fa/FaAngleUp";
 import style from "./GotoTopButton.module.scss";
 
 const GotoTopButton = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (!ref.current) return;
-      if (window.scrollY > window.innerHeight) {
+      if (window.scrollY > 100) {
         ref.current.style.display = "flex";
       } else {
         ref.current.style.display = "none";
@@ -23,14 +23,19 @@ const GotoTopButton = () => {
     };
   }, []);
 
+  const onHandleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div ref={ref} className={`app__flex text-white ${style["app__goto-top"]}`}>
-      <Link href="/" title="Home" aria-label="Home">
-
-        <FaAngleUp className="h-8" />
-
-      </Link>
-    </div>
+    <button
+      ref={ref}
+      onClick={onHandleClick}
+      className={`app__flex text-white ${style["app__goto-top"]}`}
+      title="Go to top"
+    >
+      <FaAngleUp className="h-8" />
+    </button>
   );
 };
 

@@ -54,12 +54,12 @@ const Navbar = () => {
       const className = style["app__navbar--shadow"];
       const hasShadowClassName = element.classList.contains(className);
 
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         !hasShadowClassName && element.classList.add(className);
       } else {
         hasShadowClassName && element.classList.remove(className);
       }
-    });
+    }, 500);
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -67,11 +67,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const { hash } = window.location;
-    const search = new URLSearchParams(router.asPath);
-    console.log("router", router);
-    console.log("search", search);
-    setCurrentActiveLink(hash ? hash.slice(1) : navLinks[0][0]);
-  }, []);
+    setCurrentActiveLink(hash ? hash.slice(1) : router.pathname.slice(1) || navLinks[0][0]);
+  }, [router.asPath, router.pathname]);
 
   useEffect(() => {
     mobileNavBarOpened.current = isOpen;
@@ -95,15 +92,14 @@ const Navbar = () => {
   return (
     <nav ref={navbarRef} className={style["app__navbar"]}>
       <div className={style["app__navbar-logo"]}>
-        <Link href="/" className="flex">
-
+        <Link href="/" className="flex h-10 w-64">
           <Image
             src={images.logoWhite}
             alt="Logo"
-            width={256}
-            height={40}
             priority
-            className="cursor-pointer" />
+            className="cursor-pointer"
+            sizes="100vw"
+          />
 
           {/* <div className={`text-4xl font-bold ${style["logo-font"]} cursor-pointer`}>
             <span className="text-black">PAALA</span>

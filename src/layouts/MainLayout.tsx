@@ -9,9 +9,9 @@ interface MainLayoutProps {
 
 export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
-    <div className={commonStyle.app}>
+    <div className={`${commonStyle.app}`}>
       <Header />
-      <main className="mt-[74px]">{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );

@@ -33,33 +33,35 @@ const abouts = [
 ];
 
 const Knowledge = () => {
-  return <>
-    <h2 className="head-text mt-4">
-      I Know that <span>Good Architecture</span> <br />
-      means <span>Good Solution</span>
-    </h2>
+  return (
+    <>
+      <h2 className="head-text mt-4">
+        I Know that <span>Good Architecture</span> <br />
+        means <span>Good Solution</span>
+      </h2>
 
-    <div className={style["app__profiles"]}>
-      {abouts.map((about) => (
-        <motion.div
-          whileInView={{ opacity: 1 }}
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 1, type: "spring" }}
-          className={`cursor-pointer ${style["app__profile-item"]}`}
-          key={about.title}
-        >
-          <Image
-            src={about.imgUrl}
-            alt={about.title}
-            className="skeleton-loading"
-            width={210}
-            height={160} />
-          <h2 className="bold-text mt-5 mb-3">{about.title}</h2>
-          <p className="p-text">{about.description}</p>
-        </motion.div>
-      ))}
-    </div>
-  </>;
+      <div className={style["app__profiles"]}>
+        {abouts.map((about) => (
+          <motion.div
+            whileInView={{ opacity: 1 }}
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 1, type: "spring" }}
+            className={`cursor-pointer ${style["app__profile-item"]}`}
+            key={about.title}
+          >
+            <Image
+              src={about.imgUrl}
+              alt={about.title}
+              className="skeleton-loading w-full"
+              height={180}
+            />
+            <h2 className="bold-text mt-5 mb-3">{about.title}</h2>
+            <p className="p-text">{about.description}</p>
+          </motion.div>
+        ))}
+      </div>
+    </>
+  );
 };
 
-export default AppWrap(MotionWrap(Knowledge, style["app__knowledge"]), "knowledge", "bg-secondary");
+export default AppWrap(MotionWrap(Knowledge), "knowledge", "bg-secondary");

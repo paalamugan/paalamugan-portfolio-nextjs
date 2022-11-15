@@ -48,25 +48,12 @@
       font-size: 1.25rem;
       line-height: 2rem;
       color: var(--black-color);
-      font-family: var(--font-base);
       text-align: center;
 
       @media screen and (min-width: 2000px) {
         font-size: 2rem;
         line-height: 3.5rem;
       }
-    }
-
-    h4 {
-      font-weight: 600;
-      color: rgb(var(--primary-color));
-      margin-top: 2rem;
-    }
-
-    h5 {
-      font-weight: 400;
-      color: var(--gray-color);
-      margin-top: 5px;
     }
 
     @media screen and (max-width: 600px) {
