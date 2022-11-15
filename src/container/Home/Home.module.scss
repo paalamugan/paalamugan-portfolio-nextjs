@@ -6,6 +6,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
+  min-height: calc(100vh - var(--navbar-height));
 
   .app__wrapper {
     padding: 0;
