@@ -1,5 +1,5 @@
 import { MainLayout } from "@app/layouts/MainLayout";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import CertificationsPageComponent from "@app/page-components/Certifications";
 
 const CertificationsPage: NextPage = () => {
@@ -11,3 +11,11 @@ const CertificationsPage: NextPage = () => {
 };
 
 export default CertificationsPage;
+
+export const getStaticProps: GetStaticProps = () => {
+  return {
+    props: {
+      title: "Certifications",
+    },
+  };
+};

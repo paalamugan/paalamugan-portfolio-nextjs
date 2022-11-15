@@ -6,9 +6,11 @@ import config from "@app/config";
 import images from "@app/constants/images";
 import { dmSans } from "@app/fonts/dm-sans";
 
+const suffixTitle = "Paalamugan || Senior Software Engineer";
+
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const { siteUrl, title, description, image } = pageProps;
-  const newTitle = title || "Paalamugan || Senior Software Engineer";
+  const newTitle = title ? `${title} - ${suffixTitle}` : suffixTitle;
   const newDescription =
     description ||
     "Senior Software Engineer - Full Stack Developer | Javascript Developer | MEAN Stack Developer | MERN Stack Developer | JAM Stack Developer | Nodejs Developer | Frontend Developer | Backend Developer";

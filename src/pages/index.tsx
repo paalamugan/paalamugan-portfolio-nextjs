@@ -1,4 +1,4 @@
-import { NextComponentType, PageConfig } from "next";
+import type { GetStaticProps, NextComponentType, PageConfig } from "next";
 
 import Home from "@app/container/Home/Home";
 import About from "@app/container/About/About";
@@ -41,3 +41,11 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
+export const getStaticProps: GetStaticProps = () => {
+  return {
+    props: {
+      title: "Home",
+    },
+  };
+};
