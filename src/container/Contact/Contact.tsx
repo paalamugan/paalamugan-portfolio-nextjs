@@ -228,12 +228,12 @@ const Contact = () => {
                   />
                 </div>
                 <div className={style["form-group"]}>
-                  <label htmlFor="mesage">
+                  <label htmlFor="message">
                     Message<span className={style["text-danger"]}>*</span>
                   </label>
                   <textarea
                     ref={messageRef}
-                    id="mesage"
+                    id="message"
                     className={style["form-control"]}
                     name="message"
                     rows={5}
@@ -244,24 +244,26 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              <button
-                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-primary hover:bg-primary/95"
-                type="submit"
-                name="submit_message"
-                disabled={loading}
-              >
-                {!loading ? (
-                  <>
-                    <FaPaperPlane className="mr-2" />
-                    <span>Send Message</span>
-                  </>
-                ) : (
-                  <>
-                    <BiLoaderCircle className={`mr-2 ${style["loading"]}`} />
-                    <span>Sending...</span>
-                  </>
-                )}
-              </button>
+              <div className="flex justify-center sm:justify-start">
+                <button
+                  className="inline-flex items-center px-5 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-primary hover:bg-primary/95"
+                  type="submit"
+                  name="submit_message"
+                  disabled={loading}
+                >
+                  {!loading ? (
+                    <>
+                      <FaPaperPlane className="mr-2" />
+                      <span>Send Message</span>
+                    </>
+                  ) : (
+                    <>
+                      <BiLoaderCircle className={`mr-2 ${style["loading"]}`} />
+                      <span>Sending...</span>
+                    </>
+                  )}
+                </button>
+              </div>
             </form>
           </div>
         </div>

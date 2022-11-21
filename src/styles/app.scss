@@ -35,7 +35,10 @@
 html {
   font-size: 100.5%;
   scroll-behavior: smooth !important;
-  @apply font-dmSans;
+  @apply font-dmSans overflow-x-hidden;
+  @media screen and (max-width: 290px) {
+    @apply overflow-x-auto;
+  }
 }
 
 svg {

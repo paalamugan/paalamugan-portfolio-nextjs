@@ -101,12 +101,17 @@
     }
   }
 
-  &:hover {
-    .tooltip {
-      --tooltip-scale: 1;
-      &::before {
-        --tooltip-scale: 1;
-      }
-    }
+  &.tooltip-show {
+    --tooltip-scale: 1;
   }
+
+  &.tooltip-hide {
+    --tooltip-scale: 0;
+  }
+
+  // &:hover {
+  //   .tooltip {
+  //     --tooltip-scale: 1;
+  //   }
+  // }
 }

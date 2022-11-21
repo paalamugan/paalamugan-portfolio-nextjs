@@ -26,7 +26,7 @@ export const socialLinks = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/paala-mugan-a6baa315b",
+    url: "https://linkedin.com/in/paalamugan-s-a6baa315b",
     icon: "linkedin",
   },
   {
