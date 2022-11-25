@@ -12,7 +12,6 @@ import useIntersectionObserver from "@app/hooks/useIntersectionObserver";
 
 import style from "./Contact.module.scss";
 import ToastifySuccess, { ToastifySuccessRef } from "@app/components/Toastify/ToastifySuccess";
-import Link from "next/link";
 
 const RESUME_URL = "/paalamugan-software-engineer-resume.pdf";
 const RESUME_DOWNLOAD_FILE_NAME = "paalamugan-software-engineer-resume.pdf";
