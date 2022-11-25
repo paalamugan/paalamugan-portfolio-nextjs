@@ -162,9 +162,14 @@ const Contact = () => {
                       Download
                     </a>
                     <span className="mx-1">|</span>
-                    <Link href={RESUME_URL} target="_blank" className={style["resume-link"]}>
+                    <a
+                      href={RESUME_URL}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className={style["resume-link"]}
+                    >
                       View
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
