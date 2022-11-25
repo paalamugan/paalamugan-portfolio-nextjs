@@ -41,6 +41,7 @@ module.exports = {
       twitter: "var(--twitter-color)",
       facebook: "var(--facebook-color)",
       instagram: "var(--instagram-color)",
+      hackerrank: "var(--hackerrank-color)",
     },
     extend: {
       colors: {

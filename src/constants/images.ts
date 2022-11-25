@@ -25,6 +25,7 @@ import jewelleryApp from "../assets/work/jewellery-app.png";
 import opticVisions from "../assets/work/optic-visions.png";
 import translatorApplication from "../assets/work/translator-application.png";
 import nextjsWebOAuth from "../assets/work/nextjs-web-oauth.png";
+import cryptocurrencyBitcoin from "../assets/work/cryptocurrency-bitcoin.png";
 import vueHotelManagement from "../assets/work/vue-hotel-management.png";
 import gatsbyItekscope from "../assets/work/gatsby-itekscope.png";
 import portfolioWebsite from "../assets/work/portfolio-website.png";
@@ -37,6 +38,7 @@ const work = {
   opticVisions,
   translatorApplication,
   nextjsWebOAuth,
+  cryptocurrencyBitcoin,
   vueHotelManagement,
   gatsbyItekscope,
   portfolioWebsite,

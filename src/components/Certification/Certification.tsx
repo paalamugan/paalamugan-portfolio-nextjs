@@ -16,7 +16,7 @@ const Certification: FC<CertificationProps> = ({ url, image, title, className })
         href={url}
         className="flex justify-center items-center hover:scale-105 transition-transform duration-500 hover:shadow-lg relative w-[240px] h-[220px] rounded-md"
         target="_blank"
-        rel="noreferrer"
+        rel="noreferrer noopener"
       >
         <Image
           src={image}

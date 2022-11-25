@@ -21,6 +21,15 @@ export const worksData: ReadonlyArray<WorkData> = [
     tags: ["nextjs", "reactjs", "typescript"],
   },
   {
+    imgUrl: images.work.cryptocurrencyBitcoin,
+    projectLink: "https://cryptocurrency-bitcoin.netlify.app",
+    codeLink: "https://github.com/paalamugan/cryptocurrency-bitcoin-price-chart",
+    title: "Crypto Bitcoin Price Chart",
+    description:
+      "Cryptocurrency Bitcoin Price Chart was developed using React, Typescript, coingecko-api, react-chartjs-2, chart.js and tailwindcss.",
+    tags: ["reactjs", "typescript", "tailwindcss"],
+  },
+  {
     imgUrl: images.work.vueHotelManagement,
     projectLink: "https://vue-hotel-management.vercel.app",
     codeLink: "https://github.com/paalamugan/vue-typescript-hotel-project",

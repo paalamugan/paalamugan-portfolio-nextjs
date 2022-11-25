@@ -12,6 +12,7 @@ import useIntersectionObserver from "@app/hooks/useIntersectionObserver";
 
 import style from "./Contact.module.scss";
 import ToastifySuccess, { ToastifySuccessRef } from "@app/components/Toastify/ToastifySuccess";
+import Link from "next/link";
 
 const RESUME_URL = "/paalamugan-software-engineer-resume.pdf";
 const RESUME_DOWNLOAD_FILE_NAME = "paalamugan-software-engineer-resume.pdf";
@@ -91,7 +92,7 @@ const Contact = () => {
                     href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact@paalamugan.com&amp;cc=work@paalamugan.com&amp;su=Need to discuss with you Mr. Paalamugan&amp;body=Hi there, I need to talk"
                     target="_blank"
                     className={style["mail_text"]}
-                    rel="noreferrer"
+                    rel="noreferrer noopener"
                   >
                     &nbsp;email
                   </a>
@@ -121,9 +122,9 @@ const Contact = () => {
                             <a
                               href={social.url}
                               target="_blank"
-                              rel="noreferrer"
-                              aria-label={social.icon}
-                              title={social.icon}
+                              rel="noreferrer noopener"
+                              aria-label={social.name}
+                              title={social.name}
                             >
                               <MediaIcon
                                 icon={social.icon}
@@ -153,22 +154,17 @@ const Contact = () => {
                     <h4>Resume</h4>
                     <a
                       href={RESUME_URL}
-                      rel="noreferrer"
                       target="_blank"
+                      rel="noreferrer noopener"
                       download={RESUME_DOWNLOAD_FILE_NAME}
                       className={style["resume-link"]}
                     >
                       Download
                     </a>
                     <span className="mx-1">|</span>
-                    <a
-                      href={RESUME_URL}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={style["resume-link"]}
-                    >
+                    <Link href={RESUME_URL} target="_blank" className={style["resume-link"]}>
                       View
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

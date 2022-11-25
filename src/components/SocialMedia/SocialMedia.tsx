@@ -10,9 +10,9 @@ const SocialMedia = () => {
           <a
             href={social.url}
             target="_blank"
-            rel="noreferrer"
-            aria-label={social.icon}
-            title={social.icon}
+            rel="noreferrer noopener"
+            aria-label={social.name}
+            title={social.name}
             className="flex-grow app__flex"
           >
             <MediaIcon icon={social.icon} />

@@ -58,11 +58,12 @@ const TestimonialItem = ({
               title={iconName}
               width={20}
               height={15}
-              className="bg-gray-400" />
+              className="bg-gray-400"
+            />
             <a
               href="https://www.freelancer.in/u/paalan007"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className="ml-2 bold-text text-primary"
             >
               {name}&nbsp;&nbsp;({company})

@@ -35,14 +35,9 @@ export const socialLinks = [
     icon: "twitter",
   },
   {
-    name: "Facebook",
-    url: "https://www.facebook.com/comradpaalan",
-    icon: "facebook",
-  },
-  {
-    name: "Instagram",
-    url: "https://www.instagram.com/comrade_paalan",
-    icon: "instagram",
+    name: "HackerRank",
+    url: "https://hackerrank.com/paalamugan",
+    icon: "hackerrank",
   },
 ];
 

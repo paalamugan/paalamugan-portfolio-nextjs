@@ -58,20 +58,24 @@
     border-color: var(--#{$name}-color, $color);
   }
 
-  .twitter:hover {
-    @include socialIconColor(twitter);
-  }
-
-  .facebook:hover {
-    @include socialIconColor(facebook);
-  }
-
   .github:hover {
     @include socialIconColor(github);
   }
 
   .linkedin:hover {
     @include socialIconColor(linkedin);
+  }
+
+  .twitter:hover {
+    @include socialIconColor(twitter);
+  }
+
+  .hackerrank:hover {
+    @include socialIconColor(hackerrank);
+  }
+
+  .facebook:hover {
+    @include socialIconColor(facebook);
   }
 
   .instagram:hover {
