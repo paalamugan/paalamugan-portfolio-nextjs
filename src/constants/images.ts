@@ -18,19 +18,19 @@ import resume from "../assets/resume.webp";
 import sun from "../assets/sun.png";
 import moon from "../assets/moon.png";
 
-import angular12Boilerplate from "../assets/work/angular12-boilerplate-template.png";
-import cmsBlog from "../assets/work/cms-blog.png";
-import employeePayslipGenerator from "../assets/work/employee-payslip-generator.png";
-import jewelleryApp from "../assets/work/jewellery-app.png";
-import opticVisions from "../assets/work/optic-visions.png";
-import translatorApplication from "../assets/work/translator-application.png";
-import nextjsWebOAuth from "../assets/work/nextjs-web-oauth.png";
-import cryptocurrencyBitcoin from "../assets/work/cryptocurrency-bitcoin.png";
-import vueHotelManagement from "../assets/work/vue-hotel-management.png";
-import gatsbyItekscope from "../assets/work/gatsby-itekscope.png";
-import portfolioWebsite from "../assets/work/portfolio-website.png";
+import angular12Boilerplate from "../assets/projects/angular12-boilerplate-template.png";
+import cmsBlog from "../assets/projects/cms-blog.png";
+import employeePayslipGenerator from "../assets/projects/employee-payslip-generator.png";
+import jewelleryApp from "../assets/projects/jewellery-app.png";
+import opticVisions from "../assets/projects/optic-visions.png";
+import translatorApplication from "../assets/projects/translator-application.png";
+import nextjsWebOAuth from "../assets/projects/nextjs-web-oauth.png";
+import cryptocurrencyBitcoin from "../assets/projects/cryptocurrency-bitcoin.png";
+import vueHotelManagement from "../assets/projects/vue-hotel-management.png";
+import gatsbyItekscope from "../assets/projects/gatsby-itekscope.png";
+import portfolioWebsite from "../assets/projects/portfolio-website.png";
 
-const work = {
+const project = {
   angular12Boilerplate,
   cmsBlog,
   employeePayslipGenerator,
@@ -60,7 +60,7 @@ const images = {
   resume,
   sun,
   moon,
-  work,
+  project,
 };
 
 export default images;

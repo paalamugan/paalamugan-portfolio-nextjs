@@ -1,33 +1,28 @@
 import Image from "next/image";
-import React from "react";
 import { motion } from "framer-motion";
-
 import { AiFillEye } from "@react-icons/all-files/ai/AiFillEye";
 import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub";
-import { AppWrap, MotionWrap } from "@app/wrapper";
+import { ProjectData } from "@app/types";
 import { programmingLanguages } from "@app/constants";
-import { WorkData } from "@app/types";
-import { worksData as works, workTabs } from "./data";
 
-import style from "./Work.module.scss";
-import { TabFilterContainer } from "@app/components/TabFilter/TabFilterContainer";
+import style from "./Project.module.scss";
 
-const renderWorkItem = (work: WorkData) => {
+export const Project = (project: ProjectData) => {
   return (
-    <div key={work.title} className={`${style["app__work-portfolio-item"]}`}>
-      <div className={`${style["app__work-portfolio-img"]}`}>
-        <Image src={work.imgUrl} alt={work.title} className="skeleton-loading" />
+    <div key={project.title} className={`${style["app__project-portfolio-item"]}`}>
+      <div className={`${style["app__project-portfolio-img"]}`}>
+        <Image src={project.imgUrl} alt={project.title} className="skeleton-loading" />
 
         <motion.div
           whileHover={{ opacity: [0, 1] }}
           transition={{ duration: 0.25, ease: "easeInOut", staggerChildren: 0.5 }}
-          className={`${style["app__work-portfolio-hover"]} app__flex`}
+          className={`${style["app__project-portfolio-hover"]} app__flex`}
         >
           <a
-            href={work.projectLink}
+            href={project.projectLink}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`View ${work.title} Demo`}
+            aria-label={`View ${project.title} Demo`}
           >
             <motion.div
               whileInView={{ scale: [0, 1] }}
@@ -39,10 +34,10 @@ const renderWorkItem = (work: WorkData) => {
             </motion.div>
           </a>
           <a
-            href={work.codeLink}
+            href={project.codeLink}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`View ${work.title} Github`}
+            aria-label={`View ${project.title} Github`}
           >
             <motion.div
               whileInView={{ scale: [0, 1] }}
@@ -56,16 +51,16 @@ const renderWorkItem = (work: WorkData) => {
         </motion.div>
       </div>
 
-      <div className={style["app__work-portfolio-content"]}>
+      <div className={style["app__project-portfolio-content"]}>
         <div className="flex items-center text-lg bold-text mt-4 leading-normal">
           <div
             className="flex-1 mr-1 overflow-hidden text-ellipsis whitespace-nowrap"
-            title={work.title}
+            title={project.title}
           >
-            {work.title}
+            {project.title}
           </div>
           <div className="flex gap-2">
-            {work.tags.map((tag) => (
+            {project.tags.map((tag) => (
               <a
                 key={tag}
                 href={programmingLanguages[tag]?.url}
@@ -86,23 +81,23 @@ const renderWorkItem = (work: WorkData) => {
             ))}
           </div>
         </div>
-        <p className="mt-3 mb-4 text-base text-center p-text">{work.description}</p>
+        <p className="mt-3 mb-4 text-base text-center p-text">{project.description}</p>
         <div className="flex items-center mt-auto">
           <a
-            href={work.codeLink}
+            href={project.codeLink}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`View ${work.title} Source Code`}
+            aria-label={`View ${project.title} Source Code`}
             className="text-blue-600 text-sm hover:underline"
           >
             View Source Code
           </a>
           <div className="px-2 font-medium">|</div>
           <a
-            href={work.projectLink}
+            href={project.projectLink}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`View ${work.title} Demo Website`}
+            aria-label={`View ${project.title} Demo Website`}
             className="text-blue-600 text-sm hover:underline"
           >
             View Demo Website
@@ -112,19 +107,3 @@ const renderWorkItem = (work: WorkData) => {
     </div>
   );
 };
-
-const Work = () => {
-  return (
-    <>
-      <h2 className="head-text mt-4">
-        Checkout <span>Some of</span> my work
-      </h2>
-
-      <TabFilterContainer items={works} tabs={workTabs}>
-        {(item) => renderWorkItem(item)}
-      </TabFilterContainer>
-    </>
-  );
-};
-
-export default AppWrap(MotionWrap(Work), "work", "bg-secondary");

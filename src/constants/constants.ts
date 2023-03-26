@@ -7,7 +7,7 @@ export const navLink = {
   about: "ABOUT",
   knowledge: "KNOWLEDGE",
   certifications: "CERTIFICATIONS",
-  work: "WORK",
+  projects: "PROJECTS",
   skills: "SKILLS",
   testimonial: "TESTIMONIAL",
   contact: "CONTACT",
@@ -38,6 +38,16 @@ export const socialLinks = [
     name: "HackerRank",
     url: "https://hackerrank.com/paalamugan",
     icon: "hackerrank",
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/paalamugan",
+    icon: "facebook",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/paalamugan",
+    icon: "instagram",
   },
 ];
 

@@ -24,7 +24,8 @@
     "deploy": "yarn export && gh-pages -d build -b gh-pages",
     "postbuild": "next-sitemap",
     "prepare": "husky install",
-    "analyze": "cross-env ANALYZE=true yarn build"
+    "analyze": "cross-env ANALYZE=true yarn build",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@emailjs/browser": "^3.6.2",

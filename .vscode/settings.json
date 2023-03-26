@@ -23,6 +23,7 @@
   },
   "scss.lint.unknownAtRules": "ignore",
   "cSpell.words": [
-    "freecodecamp"
+    "freecodecamp",
+    "postbuild"
   ]
 }

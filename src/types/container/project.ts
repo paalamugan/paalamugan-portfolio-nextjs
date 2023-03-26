@@ -1,9 +1,9 @@
-import { workTabs } from "@app/container/Work/data";
+import { projectTabs } from "@app/constants/projects";
 import { StaticImageData } from "next/image";
 
-type WorkTab = typeof workTabs[number];
+type WorkTab = typeof projectTabs[number];
 
-export interface WorkData {
+export interface ProjectData {
   imgUrl: StaticImageData;
   projectLink: string;
   codeLink: string;

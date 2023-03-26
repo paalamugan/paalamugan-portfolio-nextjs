@@ -5,6 +5,7 @@ import { AppWrap, MotionWrap } from "@app/wrapper";
 import { certifications } from "./data";
 import { TabFilterContainer } from "@app/components/TabFilter/TabFilterContainer";
 import Certification from "@app/components/Certification/Certification";
+import { ShowMoreLink } from "@app/components/ShowMoreLink/ShowMoreLink";
 
 const Certifications = () => {
   return (
@@ -15,15 +16,7 @@ const Certifications = () => {
         {(item) => <Certification key={item.title} {...item} />}
       </TabFilterContainer>
 
-      <Link
-        href="/certifications"
-        target="_blank"
-        className="bg-transparent mt-8 hover:bg-primary/100 text-gray-800 font-semibold hover:text-white py-2 px-8 border border-gray-400 hover:border-transparent rounded-full"
-      >
-        <div className="app__flex gap-2">
-          Show More Certifications <AiOutlineArrowRight />
-        </div>
-      </Link>
+      <ShowMoreLink href="/certifications" label="Certifications" />
     </>
   );
 };

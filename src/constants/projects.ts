@@ -1,9 +1,9 @@
 import { images } from "@app/constants";
-import { WorkData } from "@app/types";
+import { ProjectData } from "@app/types";
 
-export const worksData: ReadonlyArray<WorkData> = [
+export const projects: ReadonlyArray<ProjectData> = [
   {
-    imgUrl: images.work.portfolioWebsite,
+    imgUrl: images.project.portfolioWebsite,
     projectLink: "https://paalamugan.com",
     codeLink: "https://github.com/paalamugan/paalamugan-portfolio-nextjs",
     title: "Portfolio Website",
@@ -12,7 +12,7 @@ export const worksData: ReadonlyArray<WorkData> = [
     tags: ["nextjs", "reactjs", "tailwindcss", "typescript"],
   },
   {
-    imgUrl: images.work.nextjsWebOAuth,
+    imgUrl: images.project.nextjsWebOAuth,
     projectLink: "https://nextjs-web-oauth.vercel.app",
     codeLink: "https://github.com/paalamugan/nextjs-web-oauth-project",
     title: "Web OAuth",
@@ -21,7 +21,7 @@ export const worksData: ReadonlyArray<WorkData> = [
     tags: ["nextjs", "reactjs", "typescript"],
   },
   {
-    imgUrl: images.work.cryptocurrencyBitcoin,
+    imgUrl: images.project.cryptocurrencyBitcoin,
     projectLink: "https://cryptocurrency-bitcoin.netlify.app",
     codeLink: "https://github.com/paalamugan/cryptocurrency-bitcoin-price-chart",
     title: "Crypto Bitcoin Price Chart",
@@ -30,7 +30,7 @@ export const worksData: ReadonlyArray<WorkData> = [
     tags: ["reactjs", "typescript", "tailwindcss"],
   },
   {
-    imgUrl: images.work.vueHotelManagement,
+    imgUrl: images.project.vueHotelManagement,
     projectLink: "https://vue-hotel-management.vercel.app",
     codeLink: "https://github.com/paalamugan/vue-typescript-hotel-project",
     title: "Hotels Management",
@@ -38,7 +38,7 @@ export const worksData: ReadonlyArray<WorkData> = [
     tags: ["vue", "typescript"],
   },
   {
-    imgUrl: images.work.gatsbyItekscope,
+    imgUrl: images.project.gatsbyItekscope,
     projectLink: "https://gatsby-itekscope.vercel.app",
     codeLink: "https://github.com/paalamugan/gatsby-itekscope",
     title: "Itekscope Project",
@@ -47,7 +47,7 @@ export const worksData: ReadonlyArray<WorkData> = [
     tags: ["reactjs", "gatsby", "typescript"],
   },
   {
-    imgUrl: images.work.translatorApplication,
+    imgUrl: images.project.translatorApplication,
     projectLink: "https://translator-application.vercel.app",
     codeLink: "https://github.com/paalamugan/translator-mono-repo",
     title: "Translator Application",
@@ -56,16 +56,16 @@ export const worksData: ReadonlyArray<WorkData> = [
     tags: ["nodejs", "svelte", "typescript"],
   },
   {
-    imgUrl: images.work.angular12Boilerplate,
+    imgUrl: images.project.angular12Boilerplate,
     projectLink: "https://angular12-boilerplate-template.netlify.app",
     codeLink: "https://github.com/paalamugan/oauth-angular-12-boilerplate-template",
     title: "Angular12 Boilerplate Template",
     description:
-      "Angular12 Boilerplate Template using with angular material, flexlayout, tailwindcss and TypeScript.",
+      "Angular12 Boilerplate Template using with angular material, flex layout, tailwindcss and TypeScript.",
     tags: ["angular", "tailwindcss", "typescript"],
   },
   {
-    imgUrl: images.work.cmsBlog,
+    imgUrl: images.project.cmsBlog,
     projectLink: "https://cms-blog.paalamugan.com",
     codeLink: "https://github.com/paalamugan/cms-blog",
     title: "CMS Blog",
@@ -74,8 +74,8 @@ export const worksData: ReadonlyArray<WorkData> = [
     tags: ["nodejs", "reactjs", "mongodb", "typescript"],
   },
   {
-    imgUrl: images.work.opticVisions,
-    projectLink: "https://optic-visions.herokuapp.com",
+    imgUrl: images.project.opticVisions,
+    projectLink: "https://optic-visions.vercel.app",
     codeLink: "https://github.com/paalamugan/optic-visions",
     title: "Optic Visions",
     description:
@@ -83,7 +83,7 @@ export const worksData: ReadonlyArray<WorkData> = [
     tags: ["nodejs", "angular", "mysql", "typescript"],
   },
   {
-    imgUrl: images.work.employeePayslipGenerator,
+    imgUrl: images.project.employeePayslipGenerator,
     projectLink: "https://employee-payslip-generator.paalamugan.com",
     codeLink: "https://github.com/paalamugan/employee-payslip-generator",
     title: "Employee Payslip Generator",
@@ -91,7 +91,7 @@ export const worksData: ReadonlyArray<WorkData> = [
     tags: ["nodejs", "reactjs", "typescript"],
   },
   {
-    imgUrl: images.work.jewelleryApp,
+    imgUrl: images.project.jewelleryApp,
     projectLink: "https://jewellery-app.netlify.app", // https://via.placeholder.com/200
     codeLink: "https://github.com/paalamugan/JewelleryMiniApp-Angular",
     title: "Simple Jewellery App",
@@ -100,7 +100,7 @@ export const worksData: ReadonlyArray<WorkData> = [
   },
 ];
 
-export const workTabs = [
+export const projectTabs = [
   {
     id: "all",
     name: "All",

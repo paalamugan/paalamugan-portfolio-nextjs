@@ -16,26 +16,45 @@ const About = () => {
       </h2>
       <div className={`w-full ${style["app__about-container"]} 2xl:w-4/5`}>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <div className="flex flex-col justify-center">
-            <p className={style["p-text-lg"]}>
-              I love learning new things. Having {year}+ year of experience in MEAN & MERN Stack
-              development and more enthusiasm for my work. Able to work independently, as a part of
-              team and able to vaporize and grasp the new things. Extensive experience in working
-              with product development and startup Product Company.
+          <div className={`flex flex-col justify-center gap-2 ${style["p-text-lg"]}`}>
+            <p>
+              My name is <strong className="text-primary">Paalamugan</strong>. Having{" "}
+              <strong className="text-primary">{year}+ years </strong> of experience in{" "}
+              <strong className="text-primary">Full Stack development</strong> and more enthusiasm
+              for my work. Able to work independently, as a part of team and able to vaporize and
+              grasp the new things. Extensive experience in working with{" "}
+              <strong className="text-primary">
+                product development and startup Product Company
+              </strong>
+              . I always love to learning new things and{" "}
+              <strong className="text-primary">share my knowledge with others.</strong>
             </p>
-            <p className={style["p-text-lg"]}>
-              I am a solutions-driven Full-Stack Web Developer with strong skill sets in both
-              Front-End and Back-End. By utilizing these tools, I’ve built several features for
-              local business applications. I’ve learned a lot from new ways to debug, problem
-              solving from a high level, new frameworks and libraries, etc. I’ve reinforced and
-              improved upon my problem solving skills in both Front-End and Back-End.
+            <p>
+              I am a{" "}
+              <strong className="text-primary">solutions-driven Full-Stack Web Engineer</strong>{" "}
+              with strong skill sets in both{" "}
+              <strong className="text-primary">Front-End and Back-End</strong>. By utilizing these
+              tools,{" "}
+              <strong className="text-primary">
+                I’ve built several features for local business applications
+              </strong>
+              . I’ve learned a lot from new ways to debug, problem solving from a high level, new
+              frameworks and libraries, etc. I’ve reinforced and improved upon my{" "}
+              <strong className="text-primary">
+                problem solving skills in both Front-End and Back-End
+              </strong>
+              .
             </p>
-            <p className={style["p-text-lg"]}>
-              As a Software Engineer and Programmer. I&apos;m very passionate and dedicated towards
-              my work. I love to play with coding, building software, and focusing on learning new
-              technologies. Also, I have been working as a Senior Software Engineer for the last 1
-              years at a leading IT enabled business company known as Quantiphi Analytics Private
-              Ltd.
+            <p>
+              As a Software Engineer and Programmer.{" "}
+              <strong className="text-primary">
+                I&apos;m very passionate and dedicated towards my work
+              </strong>
+              . I love to play with coding,{" "}
+              <strong className="text-primary">
+                building software, and focusing on learning new technologies
+              </strong>
+              .
             </p>
           </div>
           <div className="flex" ref={ref}>
