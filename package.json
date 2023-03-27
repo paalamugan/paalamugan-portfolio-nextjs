@@ -25,7 +25,8 @@
     "postbuild": "next-sitemap",
     "prepare": "husky install",
     "analyze": "cross-env ANALYZE=true yarn build",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "lighthouse": "lighthouse http://localhost:3000 --view --chrome-flags=\"--headless\" --output json --output-path=./lighthouse.json"
   },
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
@@ -53,6 +54,7 @@
     "eslint-config-next": "^13.0.3",
     "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
+    "lighthouse": "^10.1.0",
     "next-sitemap": "^3.1.7",
     "postcss": "^8.4.13",
     "postcss-import": "^14.1.0",
