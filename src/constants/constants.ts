@@ -26,7 +26,7 @@ export const socialLinks = [
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/paalamugan-samayamuthu-a6baa315b",
+    url: "https://linkedin.com/in/paalamugan",
     icon: "linkedin",
   },
   {
