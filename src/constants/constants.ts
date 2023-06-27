@@ -14,7 +14,7 @@ export const navLink = {
 } as const;
 
 export type NavLink = keyof typeof navLink;
-export type NavLinkValue = typeof navLink[NavLink];
+export type NavLinkValue = (typeof navLink)[NavLink];
 
 export const navLinks = Object.entries(navLink) as [NavLink, NavLinkValue][];
 
@@ -26,7 +26,7 @@ export const socialLinks = [
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/paalamugan-s-a6baa315b",
+    url: "https://linkedin.com/in/paalamugan-samayamuthu-a6baa315b",
     icon: "linkedin",
   },
   {
@@ -39,16 +39,16 @@ export const socialLinks = [
     url: "https://hackerrank.com/paalamugan",
     icon: "hackerrank",
   },
-  {
-    name: "Facebook",
-    url: "https://www.facebook.com/paalamugan",
-    icon: "facebook",
-  },
-  {
-    name: "Instagram",
-    url: "https://www.instagram.com/paalamugan",
-    icon: "instagram",
-  },
+  // {
+  //   name: "Facebook",
+  //   url: "https://www.facebook.com/paalamugan",
+  //   icon: "facebook",
+  // },
+  // {
+  //   name: "Instagram",
+  //   url: "https://www.instagram.com/paalamugan",
+  //   icon: "instagram",
+  // },
 ];
 
 export const jobPositions = [
